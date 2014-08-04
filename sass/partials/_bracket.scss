@@ -1,0 +1,294 @@
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+// Bracket specific
+
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+.viz-bracket {
+	display: none;
+	position: relative;
+	margin: 0 auto 25px;
+	max-width: 940px;
+	@media (min-width: $large) {
+		display: block;
+	}
+}
+
+.viz-bracket-mod {
+	position: relative;
+}
+
+.viz-bracket-wrapper {
+	position: relative;
+}
+
+.viz-bracket-left {
+	margin-left: 10px;
+	height: 550px;
+	width: 500px;
+	.viz-node:nth-of-type(7), .viz-node:nth-of-type(8) {
+		.viz-bracket-designer-name {
+			// font-size: 10px;
+		}
+	}
+}
+
+.viz-bracket-right {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	width: 500px;
+	height: 550px;
+}
+
+.viz-legend {
+	@include absolute(23px 0px n n);
+	display: inline-block;
+	margin: 0 0 0 4px;
+	padding: 0;
+	list-style-position: inside;
+}
+
+.viz-legend-item {
+	@include inline-block;
+	@include trans(0.2s, opacity, ease-in-out);
+	margin: 0 15px 5px 0;
+	background-color: $bground;
+	font-size: 36px;
+	line-height: 40%;
+	&:before {
+		margin-left: -5px;
+		padding-right: 2px;
+		content: "\002022";
+	}
+	&:last-of-type {
+		margin-right: 0;
+	}
+}
+
+.viz-legend-text {
+	vertical-align: middle;
+}
+
+.viz-bracket-date-list {
+	position: relative;
+	margin: 0 0 35px;
+	padding: 0;
+	list-style-type: none;
+}
+
+.viz-bracket-date {
+	@include inline-block;
+	position: absolute;
+	padding: 0;
+	color: $med-gray;
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 11px;
+	&:nth-of-type(1){
+		left: 0px;
+	}
+	&:nth-of-type(2){
+		left: 13%;
+	}
+	&:nth-of-type(3){
+		left: 24%;
+	}
+	&:nth-of-type(4){
+		left: 36%;
+	}
+	&:nth-of-type(5){
+		left: 47%;
+	}
+	&:nth-of-type(6){
+		right: 36%;
+	}
+	&:nth-of-type(7){
+		right: 24%;
+	}
+	&:nth-of-type(8){
+		right: 13%;
+	}
+	&:nth-of-type(9){
+		right: 0px;
+	}
+}
+
+.viz-date-finished {
+	text-decoration: line-through;
+}
+
+.viz-bracket-division-border {
+	position: absolute;
+	width: 3px;
+	height: 245px;
+}
+
+.viz-division-1-border {
+	background-color: $bground-15;
+	top: 100px;
+	left: 0;
+}
+
+.viz-division-2-border {
+	background-color: $bground-11;
+	top: 370px;
+	left: 0;
+}
+
+.viz-division-3-border {
+	background-color: $bground-9;
+	top: 100px;
+	right: 0;
+}
+
+.viz-division-4-border {
+	background-color: $bground-13;
+	top: 370px;
+	right: 0;
+}
+
+.viz-bracket-info-mod {
+	@include transition(0.3s top ease-in-out, 0.3s left ease-in-out, 0.3s width ease-in-out);
+	@include absolute(20px n n 390px);
+	z-index: 1;
+	padding: 15px;
+	background: $bground;
+	width: 160px;
+	height: 76px;
+}
+
+.viz-info-initiated {
+	width: 260px;
+	height: auto;
+	border: 1px solid $light-gray;
+}
+
+.viz-info-instructions {
+	font-size: 12px;
+	text-align: center;
+	margin: 0;
+}
+
+.viz-info-designer-wrapper {
+	position: relative;
+	display: none;
+}
+
+.viz-bracket-header-wrapper {
+	display: table;
+}
+
+.viz-bracket-copy-mod {
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 7px;
+}
+
+.viz-info-designer-header-mod {
+	position: absolute;
+	top: 5px;
+	left: 47px;
+}
+
+.viz-bracket-designer-description {
+	margin: 0px;
+	padding: 10px 0 0;
+	color: $med-gray;
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 140%;
+}
+
+.viz-bracket-winner-mod {
+	@include absolute(218px n n 430px);
+	text-align: center;
+	width: 80px;
+}
+
+.viz-champion-headshot-wrap {
+	float: none;
+	margin: 0 auto 7px;
+	width: 60px;
+	height: 60px;
+	border: 1px solid $med-gray;
+	-webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
+}
+
+.viz-champion-headshot {
+	@include user-select;
+	width: 60px;
+}
+
+.viz-champion-info-wrap {
+	border-top: 1px solid $med-gray;
+	padding: 7px 0 0; // Change to 5px 0 0 when reveal champion-name
+}
+
+.viz-champion-seed {
+	margin: 0;
+	color: $med-gray;
+	font-family: $condensed;
+	font-weight: 300;
+	font-size: 12px;
+}
+
+.viz-champion-name {
+	display: none;
+	padding: 0;
+	margin: 0 0 5px;
+	font-size: 12px;
+}
+
+.viz-champion-label {
+	margin: 0;
+	font-size: 10px;
+}
+
+
+
+// SVG
+.viz-bracket-elbow {
+	@include transition(0.3s stroke-width ease-in, 0.2s stroke ease-in);
+	fill: none;
+	stroke-width: 0.5;
+	stroke: $med-gray;
+}
+
+.viz-bracket-designer-name {
+	font-size: 11px;
+	cursor: pointer;
+	letter-spacing: .25px;
+}
+
+.viz-bracket-designer-loser {
+	text-decoration: line-through;
+	fill: $med-gray;
+}
+
+.viz-bracket-seed {
+	font-weight: 300;
+	font-family: $condensed;
+	fill: $med-gray;
+}
+
+.viz-active-path {
+	@include transition(0.3s stroke-width ease-in, 0.2s stroke ease-in);
+	stroke-width: 2;
+	stroke: $txt-black;
+}
+
+.viz-bracket-left-finals-surrogate {
+	// display: none; // Reveal when we have a winner and you've set the ID
+	position: absolute;
+	width: 100px;
+	top: 160px;
+	left: 411px;
+	cursor: pointer;
+}
+
+
+

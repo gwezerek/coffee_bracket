@@ -1,0 +1,237 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width">
+	<title>Coffee Bracket</title>
+	<link rel="stylesheet" href="css/site.css">
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+</head>
+
+<body>
+	<article class="viz-article">
+		<div class="viz-container">
+
+			<!-- BRACKET MOD -->
+			<section class="viz-content-block viz-bracket">
+				<header class="viz-content-header">
+					<div class="viz-overline-wrapper">
+						<h4 class="viz-title">Who's Winning</h4>
+						<ol class="viz-legend">
+							<li class="viz-legend-item viz-division-1-text"><span class="viz-legend-text viz-detail">Brew</span></li>
+							<li class="viz-legend-item viz-division-2-text"><span class="viz-legend-text viz-detail">Cold</span></li>
+							<li class="viz-legend-item viz-division-3-text"><span class="viz-legend-text viz-detail">Mixed</span></li>
+							<li class="viz-legend-item viz-division-4-text"><span class="viz-legend-text viz-detail">Shot</span></li>
+						</ol>
+					</div>
+					<ol class="viz-bracket-date-list">
+						<li class="viz-bracket-date">March 18</li>
+						<li class="viz-bracket-date">March 20</li>
+						<li class="viz-bracket-date">March 24</li>
+						<li class="viz-bracket-date">March 26</li>
+						<li class="viz-bracket-date">March 31</li>
+						<li class="viz-bracket-date">March 26</li>
+						<li class="viz-bracket-date">March 24</li>
+						<li class="viz-bracket-date">March 20</li>
+						<li class="viz-bracket-date">March 18</li>
+					</ol>
+				</header>
+				<div class="viz-bracket-mod">
+					<div class="viz-bracket-wrapper viz-bracket-left">
+					</div>
+					<div class="viz-bracket-wrapper viz-bracket-right">
+					</div>
+					<div class="viz-bracket-left-finals-surrogate" id="1" data-originalIndex="0">&nbsp;</div>
+					<div class="viz-bracket-info-mod">
+						<p class="viz-info-instructions">Select a designer to read more about his or her accomplishments.</p>
+						<div class="viz-info-designer-wrapper">
+							<div class="viz-header-wrapper viz-bracket-header-wrapper">
+								<div class="viz-headshot-wrap">
+									<img src="http://www.guswezerek.com/projects/bracket_madness/headshots.png" class="viz-headshot" >
+								</div>
+								<div class="viz-bracket-copy-mod">
+									<p class="viz-designer-name"></p>
+									<p class="viz-designer-job"></p>
+								</div>
+							</div>
+							<p class="viz-bracket-designer-description"></p>
+						</div>
+					</div>
+					<div class="viz-bracket-winner-mod">
+						<div class="viz-headshot-wrap viz-champion-headshot-wrap">
+							<img src="img/question_icon.png" class="viz-champion-headshot" >
+						</div>
+						<div class="viz-champion-info-wrap">
+							<p class="viz-champion-name"><span class="viz-champion-seed">2</span> Dieter Rams</p>
+							<p class="viz-champion-label viz-detail">Champion</p>
+						</div>
+					</div>
+				</div>
+				<div class="viz-bracket-division-border viz-division-1-border"></div>
+				<div class="viz-bracket-division-border viz-division-2-border"></div>
+				<div class="viz-bracket-division-border viz-division-3-border"></div>
+				<div class="viz-bracket-division-border viz-division-4-border"></div>
+
+			</section>
+
+			<!-- RANKINGS MOD -->
+			<section class="viz-content-block viz-rankings">
+				<header class="viz-content-header">
+					<div class="viz-overline-wrapper">
+						<h4 class="viz-title">Who's Winning</h4>
+					</div>
+					<p class="viz-underline">Switch rounds to watch the cream rise to the top. You can tap on each designer to read more about his or her&nbsp;accomplishments.</p>
+				</header>
+				<div class="viz-division-wrapper">
+					<ol class="viz-division-list">
+						<div class="viz-rankings-winner-mod">
+							<div class="viz-headshot-wrap viz-champion-headshot-wrap">
+								<img src="img/question_icon.png" class="viz-champion-headshot" >
+							</div>
+							<div class="viz-champion-info-wrap">
+								<p class="viz-champion-name"><span class="viz-champion-seed">2</span> Dieter Rams</p>
+								<p class="viz-champion-label viz-detail">Champion</p>
+							</div>
+						</div>
+						<li class="viz-division viz-division-finals" id="division5">
+							<div class="viz-division-topper">
+								<a href="#0" class="viz-division-button viz-prev"></a>
+									<h5 class="viz-division-title">
+										<span class="viz-division-name viz-detail">Finals</span>
+										<p class="viz-division-round"></p>
+									</h5>
+								<a href="#0" class="viz-division-button viz-next"></a>
+							</div>
+							<ol class="viz-division-designers-list">
+							</ol>
+						</li>
+						<div class="viz-group-1">
+							<li class="viz-division" id="division1">
+								<div class="viz-division-topper">
+									<a href="#0" class="viz-division-button viz-prev"></a>
+										<h5 class="viz-division-title">
+											<span class="viz-division-name viz-detail">Brew</span>
+											<p class="viz-division-round">Round 1</p>
+										</h5>
+									<a href="#0" class="viz-division-button viz-next"></a>
+								</div>
+								<ol class="viz-division-designers-list">
+								</ol>
+							</li>
+							<li class="viz-division" id="division2">
+								<div class="viz-division-topper">
+									<a href="#0" class="viz-division-button viz-prev"></a>
+										<h5 class="viz-division-title">
+											<span class="viz-division-name viz-detail">Cold</span>
+											<p class="viz-division-round">Round 1</p>
+										</h5>
+									<a href="#0" class="viz-division-button viz-next"></a>
+								</div>
+								<ol class="viz-division-designers-list">
+								</ol>
+							</li>
+						</div>
+						<div class="viz-group-2">
+							<li class="viz-division" id="division3">
+								<div class="viz-division-topper">
+									<a href="#0" class="viz-division-button viz-prev"></a>
+										<h5 class="viz-division-title">
+											<span class="viz-division-name viz-detail">Mixed</span>
+											<p class="viz-division-round">Round 1</p>
+										</h5>
+									<a href="#0" class="viz-division-button viz-next"></a>
+								</div>
+								<ol class="viz-division-designers-list">
+								</ol>
+							</li>
+							<li class="viz-division" id="division4">
+								<div class="viz-division-topper">
+									<a href="#0" class="viz-division-button viz-prev"></a>
+										<h5 class="viz-division-title">
+											<span class="viz-division-name viz-detail">Shot</span>
+											<p class="viz-division-round">Round 1</p>
+										</h5>
+									<a href="#0" class="viz-division-button viz-next"></a>
+								</div>
+								<ol class="viz-division-designers-list">
+								</ol>
+							</li>
+						</div>
+					</ol>
+				</div>
+			</section>
+
+			<!-- QUIZ MOD -->
+			<section class="viz-content-block viz-quiz">
+				<header class="viz-content-header">
+					<div class="viz-overline-wrapper">
+						<h4 class="viz-title">Today's Ballot</h4>
+					</div>
+					<p class="viz-underline">Click the circle next to the coffe you want to see move on to the next round.</p>
+				</header>
+				<div class="ss-form viz-quiz-content">
+					<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" =></iframe>
+					<form class="viz-form" action="assigned in chart.js" method="POST" target="hidden_iframe">
+						<div role="list" class="viz-quiz-wrapper">
+							<div class="viz-quiz-left"></div>
+							<div class="viz-quiz-right"></div>
+							<input type="hidden" name="draftResponse" value="[,,&quot;6794774896077403743&quot;]">
+					        <input type="hidden" name="pageHistory" value="0">
+					        <input type="hidden" name="fromEmail" value="false">
+					        <input type="hidden" name="fbzx" value="6794774896077403743">
+						</div>
+					</form>
+				</div>
+			</section>
+
+
+
+		<!-- Templates for Questions -->
+		<script type="text/template" class="viz-designer-template">
+			<% if (vizEven == false && vizQuiz == true) { %>
+				<ul class="ss-choices viz-choices-group" role="radiogroup" aria-label="Who is the better designer?">
+			<% } %>
+				<li data-originalIndex="<%= original_index %>" class="ss-choice-item viz-choice-item">
+					<label>
+						<span class="ss-choice-item-control goog-inline-block">
+							<input disabled type="radio" name="<%= input_name %>" value="<%= name %>" id="<%= input_id %>" role="radio" class="ss-q-radio viz-radio" aria-label="<%= name %>">
+						</span>
+					</label>
+					<div class="viz-header-wrapper">
+						<span class="viz-vs">vs</span>
+						<div class="viz-headshot-wrap">
+							<img src="http://www.guswezerek.com/projects/bracket_madness/headshots.png" class="viz-headshot viz-division-<%= division_index %>-img" style="right:<%= 40 * original_index %>px"/>
+						</div>
+						<div class="viz-designer-header-mod">
+							<p class="ss-choice-label viz-designer-name"><%= name %></p>
+							<p class="ss-choice-label viz-designer-job">(<%= rank %>) <%= job %></p>
+						</div>
+						<% if (vizQuiz == true) { %>
+							<span class="viz-quiz-target">&nbsp;</span>
+						<% } %>
+					</div>
+					<p class="viz-designer-description"><%= description %></p>
+				</li>
+				<% if (vizEven == true && vizQuiz == true) { %>
+				</ul>
+				<p class="viz-submitted-alert">Submitted!</p>
+			<% } %>
+		</script>
+
+		<script type="text/javascript" src="js/quiz.js"></script>
+
+	</article>
+
+</body>
+
+</html>

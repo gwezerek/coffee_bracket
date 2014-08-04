@@ -1,0 +1,84 @@
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+// Quiz specific
+
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+.viz-quiz-wrapper {
+	@media (min-width: $small) {
+		@include pie-clearfix;
+	}
+}
+
+.viz-quiz {
+	// display: none;
+	max-width: 634px;
+	margin: 0 auto;
+}
+
+.viz-quiz-content {
+	// display: none;
+}
+
+.viz-quiz-left {
+	@media (min-width: $small) {
+		width: 49%;
+		float: left;
+	}
+}
+
+.viz-quiz-right {
+	@media (min-width: $small) {
+		width: 48%;
+		float: right;
+	}
+}
+
+.viz-radio {
+    display:none;
+}
+
+.viz-quiz-target {
+	@include trans(0.2s, opacity, ease-in-out);
+	@include absolute(8px 0px n n);
+	width: 25px;
+	height: 25px;
+	background: url('http://www.guswezerek.com/projects/bracket_madness/choice_targets.png') no-repeat;
+	// background: url('http://www.fastcodesign.com/asset_files/-/2014/03/12/choice_targets.png') no-repeat;
+	background-position: 0 0;
+	background-size: 25px;
+	opacity: 0.25;
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.viz-submitted-alert {
+	display: none;
+	margin: -25px 0 10px;
+	padding: 5px;
+	color: $light-gray;
+	text-align: center;
+	font-weight: 300;
+	font-size: 11px;
+}
+
+.viz-choice-winner {
+	& .viz-quiz-target {
+		background-position: 0 -50px;
+		opacity: 1;
+	}
+}
+
+.viz-choice-loser {
+	& .viz-quiz-target {
+		background-position: 0 -25px;
+	}
+	& .viz-designer-name {
+		color: $med-gray;
+		font-weight: 300;
+	}
+	& .viz-headshot {
+		opacity: .3;
+	}
+}

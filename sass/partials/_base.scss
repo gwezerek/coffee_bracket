@@ -1,0 +1,214 @@
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+//  Base styles
+
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+.viz-article {
+	margin: 0 auto;
+	height: 100%;
+	color: $txt-black;
+	font-size: 15px;
+	font-family: $sans;
+	text-rendering: optimizeLegibility;
+}
+
+.viz-container {
+	position: relative;
+	background-color: $bground;
+}
+
+.viz-detail {
+    color: $med-gray;
+    text-transform: uppercase;
+	letter-spacing: .5px;
+    font-weight: 300;
+    font-size: 11px;
+	line-height: 80%;
+}
+
+.viz-overline {
+	margin: 0 0 5px;
+	padding-bottom: 3px;
+	border-bottom: 1px solid $light-gray;
+	color: $med-gray;
+	font-weight: 300;
+	font-size: 11px;
+}
+
+.viz-title {
+	@include inline-block;
+	margin: 0;
+	font-weight: 500;
+	font-size: 42px;
+	font-family: $condensed;
+	line-height: 90%;
+	word-spacing: 2px;
+	text-transform: uppercase;
+	@media (min-width: $small) {
+		// font-size: 42px;
+	}
+}
+
+.viz-underline {
+	margin-top: 0;
+	color: $txt-black;
+	font-weight: 300;
+	line-height: 140%;
+}
+
+.viz-copy {
+	color: $dark-gray;
+	font-weight: 300;
+	line-height: 140%;
+}
+
+.viz-byline {
+	letter-spacing: .5px;
+	line-height: 90%;
+}
+
+.viz-content-block {
+	margin: 0 0 40px;
+}
+
+.viz-content-header {
+	margin: 0 0 30px;
+}
+
+.viz-overline-wrapper {
+	position: relative;
+	margin: 0 0 5px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid $txt-black;
+}
+
+.viz-subhed {
+	margin: 0 0 10px;
+	padding-bottom: 3px;
+	border-bottom: 1px solid $light-gray;
+	font-weight: 500;
+	font-size: 13px;
+}
+
+.viz-subhed-select {
+	padding-bottom: 7px;
+}
+
+
+
+
+
+
+
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+// Designer Mod
+
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+.viz-choice-item {
+	@include trans(0.2s, padding, ease-in-out);
+	padding: 5px 0;
+	width: 100%;
+	cursor: pointer;
+	-webkit-column-break-inside: avoid;
+	-webkit-backface-visibility: hidden;
+	&:nth-child(2n) {
+		margin-bottom: 10px;
+		border-top: 1px solid $light-gray;
+		.viz-vs {
+			display: block;
+		}
+	}
+	&:last-of-type {
+		padding-bottom: 0;
+	}
+}
+
+.viz-choices-group {
+	@include trans(0.2s, width, ease-in-out);
+	margin: 0 0 20px;
+	padding: 0 0 0 10px;
+	border-left: 1px solid $light-gray;
+	list-style-type: none;
+	vertical-align: top;
+	@media (min-width: $small) {
+		display: inline-block;
+		width: 100%;
+	}
+	& .viz-choice-item {
+		margin-bottom: 0;
+	}
+}
+
+.viz-header-wrapper {
+	@include pie-clearfix;
+	position: relative;
+}
+
+.viz-designer-description {
+	display: none;
+	margin: 0px;
+	padding: 10px 0;
+	color: $med-gray;
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 140%;
+}
+
+.viz-headshot-wrap {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	width: 40px;
+	height: 40px;
+}
+
+// Supercute img tag sprites hack
+.viz-headshot {
+	@include user-select;
+	@include transition(0.2s opacity ease-in-out, 0.3s right ease-in-out, 0.3s background-color ease-in-out);
+	position: relative;
+	width: 1280px;
+	height: 40px;
+}
+
+.viz-designer-name {
+	@include trans(0.2s, color, ease-in-out);
+	display: block;
+	margin: 0 0 2px;
+	font-weight: 500;
+	font-size: 13px;
+}
+
+.viz-designer-job {
+	display: block;
+	margin: 0;
+	color: $med-gray;
+	font-weight: 300;
+	font-size: 11px;
+}
+
+.viz-designer-header-mod {
+	@extend %vertical-align;
+	left: 47px;
+	padding-right: 35px;
+	margin-top: 1px;
+}
+
+.viz-vs {
+	@include trans(0.2s, opacity, ease-in-out);
+	@include absolute(-13px 0px n n);
+	z-index: 1;
+	display: none;
+	padding: 0;
+	width: 25px;
+	height: 15px;
+	border: 1px solid $light-gray;
+	background-color: white;
+	color: $light-gray;
+	text-align: center;
+	font-weight: 300;
+	font-size: 10px;
+}

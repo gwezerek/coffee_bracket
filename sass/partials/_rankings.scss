@@ -1,0 +1,219 @@
+
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+// Rankings specific
+
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+.viz-rankings {
+	max-width: 634px;
+	margin: 0 auto 55px;
+	@media (min-width: $small) {
+		margin: 0 auto 20px;
+	}
+	@media (min-width: $large) {
+		display: none;
+	}
+}
+
+.viz-group-1 {
+	@media (min-width: $small) {
+		width: 48%;
+		float: left;
+	}
+}
+
+.viz-group-2 {
+	& .viz-division:last-of-type {
+		margin-bottom: 0;
+	}
+
+	@media (min-width: $small) {
+		width: 49%;
+		padding-left: 17px;
+		margin-left: 15px;
+		border-left: 1px dotted $light-gray;
+		float: right;
+	}
+}
+
+.viz-division-list {
+	@include pie-clearfix;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+
+
+// Nav
+.viz-nav-anchor-list {
+	padding: 0;
+	list-style-type: none;
+}
+
+
+// Topper
+.viz-division-topper {
+	position: relative;
+	margin: 0 auto 10px;
+	padding: 0;	
+	border: 1px solid $light-gray;
+	-webkit-column-break-inside: avoid;
+	-webkit-backface-visibility: hidden;
+}
+
+.viz-division-final-topper {
+	border-width: 2px;
+	border-color: $txt-black;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+.viz-division-title {
+	display: inline-block;
+	margin: -3px 0 0;
+	width: 100%;
+	color: $txt-black;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 11px;
+	line-height: 80%;
+}
+
+.viz-division-title-final {
+	margin: -3px 0 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.viz-division-bull {
+	margin-left: 4px;
+	padding-right: 4px;
+	vertical-align: middle;
+	font-size: 36px;
+}
+
+.viz-division-button {
+	display: none;
+	@include trans(0.2s, opacity, ease-in-out);
+	position: absolute;
+	top: 10px;
+	width: 20px;
+	height: 20px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	opacity: 0.3;
+	cursor: pointer;
+	&:hover {
+		opacity: 1;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+.viz-prev {
+	left: 10px;
+	background-image: url('http://www.guswezerek.com/projects/bracket_madness/btn-prev.png');
+	// background-image: url('http://www.fastcodesign.com/asset_files/-/2014/03/12/btn-next.png');
+	
+}
+
+.viz-next {
+	right: 10px;
+	background-image: url('http://www.guswezerek.com/projects/bracket_madness/btn-next.png');
+	// background-image: url('http://www.fastcodesign.com/asset_files/-/2014/03/12/btn-prev.png');
+}
+
+.viz-division-button-img {
+	margin: 0;
+	width: 20px;
+}
+
+.viz-division-name {
+	margin-top: 0;
+	padding: 0 5px;
+	text-align: center;
+	background-color: $bground;
+}
+
+.viz-division-round {
+	color: $txt-black;
+	letter-spacing: 0.5px;
+	font-size: 15px;
+	font-family: $slab;
+	margin: 10px 0 16px;
+	font-weight: 600;
+}
+
+.viz-division-final-round {
+	letter-spacing: 0.5px;
+	font-size: 15px;
+	margin: 0 0 5px;
+}
+
+// Divison lists
+.viz-division {
+	@include inline-block;
+	width: 100%;
+	margin: 0 0 35px;
+	@media (min-width: $small) {
+		&:last-of-type .viz-division-designers-list, .viz-choice-item:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.viz-division-finals {
+	margin-bottom: 35px;
+	// display: none; // Switch to display: block when appropriate
+}
+
+.viz-rankings-winner-mod {
+	// display: none;
+	text-align: center;
+	width: 100px;
+	margin: 0 auto 35px;
+}
+
+.viz-division-winner {
+	color: $txt-black;
+	letter-spacing: 0.5px;
+	font-size: 15px;
+	font-family: $slab;
+	margin: 10px 0 10px;
+	font-weight: 600;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	display: none; // Switch to display: block on the final day
+}
+
+.viz-division-designers-list {
+	position: relative;
+	margin: 0;
+	padding: 0 10px;
+	list-style-type: none;
+}
+
+
+// Loser conditional styling
+.viz-division .viz-choice-loser {
+	margin-bottom: 0;
+	padding: 0 0 5px;
+	border-top: none;
+	& .viz-vs {
+		display: none;
+	}
+}
+
+// Rearrange styling
+.viz-transition {
+	position: absolute;
+	& .viz-vs {
+		opacity: 0;
+	}
+}
