@@ -1041,28 +1041,28 @@
 
 /* line 128, ../sass/partials/_bracket.scss */
 .viz-division-1-border {
-  background-color: #ff8a80;
+  background-color: #f2d46d;
   top: 100px;
   left: 0;
 }
 
 /* line 134, ../sass/partials/_bracket.scss */
 .viz-division-2-border {
-  background-color: #b781ff;
+  background-color: #80bdb6;
   top: 370px;
   left: 0;
 }
 
 /* line 140, ../sass/partials/_bracket.scss */
 .viz-division-3-border {
-  background-color: #819fff;
+  background-color: #e09d8b;
   top: 100px;
   right: 0;
 }
 
 /* line 146, ../sass/partials/_bracket.scss */
 .viz-division-4-border {
-  background-color: #ff81f4;
+  background-color: #f0bd89;
   top: 370px;
   right: 0;
 }
@@ -1265,40 +1265,40 @@ body {
 
 /* line 47, ../sass/site.scss */
 .viz-division-1-text {
-  color: #ff8a80;
+  color: #f2d46d;
 }
 
 /* line 51, ../sass/site.scss */
 .viz-division-2-text {
-  color: #b781ff;
+  color: #80bdb6;
 }
 
 /* line 55, ../sass/site.scss */
 .viz-division-3-text {
-  color: #819fff;
+  color: #e09d8b;
 }
 
 /* line 59, ../sass/site.scss */
 .viz-division-4-text {
-  color: #ff81f4;
+  color: #f0bd89;
 }
 
 /* line 63, ../sass/site.scss */
 .viz-division-1-img {
-  background-color: #ff8a80;
+  background-color: #f2d46d;
 }
 
 /* line 67, ../sass/site.scss */
 .viz-division-2-img {
-  background-color: #b781ff;
+  background-color: #80bdb6;
 }
 
 /* line 71, ../sass/site.scss */
 .viz-division-3-img {
-  background-color: #819fff;
+  background-color: #e09d8b;
 }
 
 /* line 75, ../sass/site.scss */
 .viz-division-4-img {
-  background-color: #ff81f4;
+  background-color: #f0bd89;
 }
