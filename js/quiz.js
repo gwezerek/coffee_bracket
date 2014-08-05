@@ -46,35 +46,35 @@ var divisions = {
 
 	division1: {
 		roundNumber: 1,
-		roundArray: [1, 2, 3],
+		roundArray: [1],
 		round1: [0, 7, 1, 6, 2, 5, 3, 4],
 		round2: [0, 3, 2, 6, 7, 1, 4, 5],
 		round3: [0, 2, 3, 6, 7, 1, 4, 5]
 	},
 	division2: {
 		roundNumber: 1,
-		roundArray: [1, 2, 3],
+		roundArray: [1],
 		round1: [8, 15, 9, 14, 10, 13, 11, 12],
 		round2: [15, 12, 13, 14, 8, 9, 10, 11],
 		round3: [12, 13, 15, 14, 8, 9, 10, 11]
 	},
 	division3: {
 		roundNumber: 1,
-		roundArray: [1, 2, 3],
+		roundArray: [1],
 		round1: [16, 23, 17, 22, 18, 21, 19, 20],
 		round2: [16, 19, 21, 17, 23, 20, 22, 18],
 		round3: [16, 17, 19, 21, 23, 20, 22, 18]
 	},
 	division4: {
 		roundNumber: 1,
-		roundArray: [1, 2, 3],
+		roundArray: [1],
 		round1: [24, 31, 25, 30, 26, 29, 27, 28],
 		round2: [24, 28, 29, 25, 31, 30, 26, 27],
 		round3: [28, 29, 24, 25, 31, 30, 26, 27]
 	},
 	division5: {
 		roundNumber: 1,
-		roundArray: [1,2],
+		roundArray: [1],
 		round1: [0, 13, 17, 28],
 		round2: [0, 17, 13, 28]
 	}
@@ -599,8 +599,8 @@ function populateQuiz(data) {
     	var divisionRoundArray = divisions[divisionID].roundArray;
     	var desiredIndices = divisions[divisionID]["round" + divisionRound];
 
-        // Get and order only the division's designers
-        var rankingsData = filterData(data, desiredIndices);
+      // Get and order only the division's designers
+      var rankingsData = filterData(data, desiredIndices);
 
     	// console.log(rankingsData);
 
@@ -625,7 +625,10 @@ function populateQuiz(data) {
         setLosers(divisionRound, $this);
 
         // Show and hide the right buttons
+            	console.log(divisionRoundArray);
+
         setButtons(divisionRound, divisionRoundArray, $this);
+
 
       });
 }

@@ -571,10 +571,12 @@
 /* line 170, ../sass/partials/_rankings.scss */
 .viz-division-finals {
   margin-bottom: 35px;
+  display: none;
 }
 
 /* line 175, ../sass/partials/_rankings.scss */
 .viz-rankings-winner-mod {
+  display: none;
   text-align: center;
   width: 100px;
   margin: 0 auto 35px;
