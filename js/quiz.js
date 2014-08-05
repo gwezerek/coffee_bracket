@@ -152,53 +152,72 @@ function buildBracket(data, leftRightIndex, target) {
 			var nodes = tree.nodes(json.parents[leftRightIndex]);
 
 			var link = svg.selectAll(".link")
-			.data(tree.links(nodes))
-			.enter().append("path")
-			.attr("class", "viz-bracket-elbow");
+				.data(tree.links(nodes))
+				.enter().append("path")
+				.attr("class", "viz-bracket-elbow");
 
 			var node = svg.selectAll(".node")
-			.data(nodes)
-			.enter().append("g")
-			.attr("class", function(n) {
-				if (n.children) {
-					return "viz-inner viz-node";
-				} else {
-					return "viz-leaf viz-node";
-				}
+				.data(nodes)
+				.enter().append("g")
+				.attr("class", function(n) {
+					if (n.children) {
+						return "viz-inner viz-node";
+					} else {
+						return "viz-leaf viz-node";
+					}
+				});
+
+			designerText = node.append("text");
+
+			// Storing data-originalIndex custom, namespaced attribute
+			designerText.each(function(d) {
+				this.setAttributeNS("http://www.guswezerek.com", "data-originalIndex", d.competitorIndex);
 			});
 
-			designerText = node.append("text")
-			.attr("class", function(d) {
-				if (d.lost == "true") {
-					return "viz-bracket-designer-name viz-bracket-designer-loser";
-				} else {
-					return "viz-bracket-designer-name";
-				}
-			})
-			.attr("y", -6);
+			designerText.attr("class", function(d) {
+					if (d.lost == "true") {
+						return "viz-bracket-designer-name viz-bracket-designer-loser";
+					} else {
+						return "viz-bracket-designer-name";
+					}
+				})
+				.attr("y", function(d) {
+					// if it has a second line, y should be larger
+					if (data[d.competitorIndex] && data[d.competitorIndex].second_line !== "FALSE") {
+						return "-16";
+					} else {
+						return "-5";
+					}
+				});
 
-		// Storing data-originalIndex custom, namespaced attribute
-		designerText.each(function(d) {
-			this.setAttributeNS("http://www.guswezerek.com", "data-originalIndex", d.competitorIndex);
-		});
 
-		// Seed
-		designerText.append("tspan")
-		.attr("class", "viz-bracket-seed")
-		.text(function(d) {
-			if (data[d.competitorIndex] && data[d.competitorIndex].rank) {
-				return data[d.competitorIndex].rank;
-			}
-		});
 
-		// Designer
-		designerText.append("tspan")
-		.attr("dx", "3")
-		.text(function(d) {
-			if (data[d.competitorIndex] && data[d.competitorIndex].name) {
-				return data[d.competitorIndex].name;
-			}
-		});
+			// Seed
+			designerText.append("tspan")
+				.attr("class", "viz-bracket-seed")
+				.text(function(d) {
+					if (data[d.competitorIndex] && data[d.competitorIndex].rank) {
+						return data[d.competitorIndex].rank;
+					}
+				});
+
+			// Competitor first line
+			designerText.append("tspan")
+				.attr("dx", "3")
+				.text(function(d) {
+					if (data[d.competitorIndex] && data[d.competitorIndex].first_line) {
+						return data[d.competitorIndex].first_line;
+					}
+				});
+
+			// Competitor second line
+			var secondLine = designerText.append("tspan")
+				.attr("dy", "1em")
+				.text(function(d) {
+					if (data[d.competitorIndex] && data[d.competitorIndex].second_line !== "FALSE") {
+						return data[d.competitorIndex].second_line;
+					}
+				});
 
 		// Binds the handler that shows the winners' paths on hover
 		// We target the surrogate to get around the division-right overlapping division-left
@@ -253,6 +272,7 @@ function buildBracket(data, leftRightIndex, target) {
 			});
 			link.attr("d", elbowRight);
 			designerText.attr("text-anchor", "start").attr("x", 5);
+			secondLine.attr("x", "7");
 		} else {
 			node.attr("transform", function(d) {
 				return "translate(" + d.y + "," + d.x + ")";
@@ -260,6 +280,7 @@ function buildBracket(data, leftRightIndex, target) {
 			link.attr("d", elbowLeft);
 			adjustFinalsRight();
 			designerText.attr("text-anchor", "end").attr("x", 95);
+			secondLine.attr("x", "100");
 		}
 
 		adjustFinalsLeft();
