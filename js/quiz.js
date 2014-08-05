@@ -6,7 +6,7 @@
 var data = "";
 var i = 0;
 var formURL = "https://docs.google.com/forms/d/17DH9Pz93-dSye9QCFmrO27INIlCZwXhFtQ9EV0IOGo0/formResponse"; // Example: "https://docs.google.com/forms/d/KEYGOESHERE/formResponse"
-var spreadsheetURL = "data/designers_1.tsv";
+var spreadsheetURL = "data/competitors.tsv";
 
 //Dynamic url
 // var spreadsheetURL = "https://docs.google.com/spreadsheet/pub?key=0AmqQKSPoegtOdEcyWldpLWpKY0txU0NRNzBDdW5wZlE&single=true&gid=0&output=csv"; // Example: "https://docs.google.com/spreadsheet/pub?key=KEYGOESHERE&single=true&gid=0&output=csv"

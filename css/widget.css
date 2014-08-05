@@ -279,6 +279,7 @@
   text-align: center;
   font-weight: 300;
   font-size: 10px;
+  padding-top: 1px;
 }
 
 @media (min-width: 620px) {
@@ -535,11 +536,11 @@
 /* line 143, ../sass/partials/_rankings.scss */
 .viz-division-round {
   color: #33312e;
-  letter-spacing: 0.5px;
-  font-size: 15px;
-  font-family: "FCZizouSlab", Georgia, Times, Times New Roman, serif;
+  letter-spacing: 1.5px;
+  font-size: 20px;
+  font-family: "FCKaiserCond", Helvetica, Arial, sans-serif;
   margin: 10px 0 16px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* line 152, ../sass/partials/_rankings.scss */

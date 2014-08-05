@@ -57,7 +57,7 @@
 .viz-division-topper {
 	position: relative;
 	margin: 0 auto 10px;
-	padding: 0;	
+	padding: 0;
 	border: 1px solid $light-gray;
 	-webkit-column-break-inside: avoid;
 	-webkit-backface-visibility: hidden;
@@ -119,7 +119,7 @@
 	left: 10px;
 	background-image: url('http://www.guswezerek.com/projects/bracket_madness/btn-prev.png');
 	// background-image: url('http://www.fastcodesign.com/asset_files/-/2014/03/12/btn-next.png');
-	
+
 }
 
 .viz-next {
@@ -142,11 +142,11 @@
 
 .viz-division-round {
 	color: $txt-black;
-	letter-spacing: 0.5px;
-	font-size: 15px;
-	font-family: $slab;
+	letter-spacing: 1.5px;
+	font-size: 20px;
+	font-family: $condensed;
 	margin: 10px 0 16px;
-	font-weight: 600;
+	font-weight: 500;
 }
 
 .viz-division-final-round {
