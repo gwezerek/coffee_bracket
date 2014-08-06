@@ -181,7 +181,18 @@
 	}
 }
 
+.viz-info-initiated {
+	width: 260px;
+	height: auto;
+	border: 1px solid $light-gray;
+	box-shadow: -4px 4px 10px rgba(0,0,0,.15);
+	&:after, &:before {
+		display: block;
+	}
+}
+
 .viz-bracket-info-left {
+	box-shadow: 4px 4px 10px rgba(0,0,0,.15);
 	&:after, &:before {
 		right: 100%;
 		left: auto;
@@ -193,16 +204,6 @@
 	&:before {
 		border-left-color: transparent;
 		border-right-color: shade($light-gray, 5%);
-	}
-}
-
-.viz-info-initiated {
-	width: 260px;
-	height: auto;
-	border: 1px solid $light-gray;
-	box-shadow: 4px 4px 10px rgba(0,0,0,.15);
-	&:after, &:before {
-		display: block;
 	}
 }
 
