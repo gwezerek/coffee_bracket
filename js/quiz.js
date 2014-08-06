@@ -17,7 +17,7 @@ var vizQuiz = true;
 var quizTemplate = _.template( $(".viz-designer-template").html() );
 
 // For bracket
-var divisionColor = ["rgb(255,138,128)", "rgb(183,129,255)", "rgb(129,159,255)", "rgb(255,129,244)"];
+var divisionColor = ["#F2D46D", "#80BDB6", "#E09D8B", "#F0BD89"];
 var designerText = "";
 
 // For quiz
@@ -271,22 +271,22 @@ function buildBracket(data, leftRightIndex, target) {
 				return "translate(" + (width - d.y) + "," + d.x + ")";
 			});
 			link.attr("d", elbowRight);
-			designerText.attr("text-anchor", "start").attr("x", 5);
-			secondLine.attr("x", "7");
+			designerText.attr("text-anchor", "end");
+			secondLine.attr("x", "95");
 		} else {
 			node.attr("transform", function(d) {
 				return "translate(" + d.y + "," + d.x + ")";
 			});
 			link.attr("d", elbowLeft);
 			adjustFinalsRight();
-			designerText.attr("text-anchor", "end").attr("x", 95);
-			secondLine.attr("x", "100");
+			designerText.attr("text-anchor", "start");
+			secondLine.attr("x", "12");
 		}
 
 		adjustFinalsLeft();
 		adjustFinalsRight();
-		d3.selectAll(".viz-bracket-left .viz-leaf text").attr("x", 0);
-		d3.selectAll(".viz-bracket-right .viz-leaf text").attr("x", 100);
+		d3.selectAll(".viz-bracket-left .viz-leaf text").attr("x", 95);
+		d3.selectAll(".viz-bracket-right .viz-leaf text").attr("x", 5);
 
 	});
 }
@@ -394,7 +394,7 @@ $(".viz-division-button").on("click", function() {
 });
 
 
-// Selecting designers for the infoMod in the middle of the bracket
+// Selecting designers for the infoMod
 // And moving the info mod to the correct position
 $(".viz-bracket").on("click", ".viz-bracket-designer-name", function() {
 
@@ -408,26 +408,28 @@ $(".viz-bracket").on("click", ".viz-bracket-designer-name", function() {
 	var bracket = $(this).closest(".viz-bracket-wrapper");
 	var node = $(this).parent()[0];
 	var position = $(this).parent().attr("transform").replace("translate(","");
-		var pozLeft = parseInt(position.match(/\d+/)[0]);
-		var pozTop = parseInt(position.match( /,\d+/)[0].replace(",",""));
+	var pozLeft = parseInt(position.match(/\d+/)[0]);
+	var pozTop = parseInt(position.match( /,\d+/)[0].replace(",",""));
 
-		if (bracket.hasClass("viz-bracket-left")) {
-			if (node.hasClass("viz-leaf")) {
-				pozLeft += 10;
-				pozTop -= 36;
-			} else if (node.hasClass("viz-inner")) {
-				pozLeft += 15;
-				pozTop -= 24;
-			}
-		} else if (bracket.hasClass("viz-bracket-right")) {
-			if (node.hasClass("viz-leaf")) {
-				pozLeft += 270;
-				pozTop -= 36;
-			} else if (node.hasClass("viz-inner")) {
-				pozLeft += 265;
-				pozTop -= 25;
-			}
+	if (bracket.hasClass("viz-bracket-left")) {
+		infoMod.addClass("viz-bracket-info-left");
+		if (node.hasClass("viz-leaf")) {
+			pozLeft += 130;
+			pozTop -= 24;
+		} else if (node.hasClass("viz-inner")) {
+			pozLeft += 135;
+			pozTop -= 24;
 		}
+	} else if (bracket.hasClass("viz-bracket-right")) {
+		infoMod.removeClass("viz-bracket-info-left");
+		if (node.hasClass("viz-leaf")) {
+			pozLeft += 150;
+			pozTop -= 26;
+		} else if (node.hasClass("viz-inner")) {
+			pozLeft += 145;
+			pozTop -= 27;
+		}
+	}
 
 
 		infoMod.find(".viz-info-instructions").fadeOut(200);
@@ -482,10 +484,10 @@ $(".viz-bracket-left-finals-surrogate").on("click", function() {
 			}
 		} else if (bracket.hasClass("viz-bracket-right")) {
 			if (node.hasClass("viz-leaf")) {
-				pozLeft += 270;
+				pozLeft += 260;
 				pozTop -= 36;
 			} else if (node.hasClass("viz-inner")) {
-				pozLeft += 265;
+				pozLeft += 255;
 				pozTop -= 25;
 			}
 		}

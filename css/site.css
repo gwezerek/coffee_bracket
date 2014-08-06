@@ -411,12 +411,20 @@
 .viz-choice-item:nth-child(2n) .viz-vs {
   display: block;
 }
-/* line 124, ../sass/partials/_base.scss */
+/* line 123, ../sass/partials/_base.scss */
+.viz-choice-item:nth-child(2n) .viz-designer-description {
+  padding: 10px 0 0;
+}
+/* line 127, ../sass/partials/_base.scss */
+.viz-choice-item:nth-of-type(1) {
+  padding: 0 0 5px;
+}
+/* line 130, ../sass/partials/_base.scss */
 .viz-choice-item:last-of-type {
   padding-bottom: 0;
 }
 
-/* line 129, ../sass/partials/_base.scss */
+/* line 135, ../sass/partials/_base.scss */
 .viz-choices-group {
   -webkit-transition: width 0.2s ease-in-out;
   -moz-transition: width 0.2s ease-in-out;
@@ -429,18 +437,18 @@
   vertical-align: top;
 }
 @media (min-width: 620px) {
-  /* line 129, ../sass/partials/_base.scss */
+  /* line 135, ../sass/partials/_base.scss */
   .viz-choices-group {
     display: inline-block;
     width: 100%;
   }
 }
-/* line 140, ../sass/partials/_base.scss */
+/* line 146, ../sass/partials/_base.scss */
 .viz-choices-group .viz-choice-item {
   margin-bottom: 0;
 }
 
-/* line 145, ../sass/partials/_base.scss */
+/* line 151, ../sass/partials/_base.scss */
 .viz-header-wrapper {
   *zoom: 1;
   position: relative;
@@ -452,7 +460,7 @@
   clear: both;
 }
 
-/* line 150, ../sass/partials/_base.scss */
+/* line 156, ../sass/partials/_base.scss */
 .viz-designer-description {
   display: none;
   margin: 0px;
@@ -463,7 +471,7 @@
   line-height: 140%;
 }
 
-/* line 160, ../sass/partials/_base.scss */
+/* line 166, ../sass/partials/_base.scss */
 .viz-headshot-wrap {
   position: relative;
   float: left;
@@ -472,7 +480,7 @@
   height: 40px;
 }
 
-/* line 169, ../sass/partials/_base.scss */
+/* line 175, ../sass/partials/_base.scss */
 .viz-headshot {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -481,16 +489,12 @@
   user-select: none;
   -webkit-user-drag: none;
   user-drag: none;
-  -webkit-transition: 0.2s opacity ease-in-out, 0.3s right ease-in-out, 0.3s background-color ease-in-out;
-  -moz-transition: 0.2s opacity ease-in-out, 0.3s right ease-in-out, 0.3s background-color ease-in-out;
-  -o-transition: 0.2s opacity ease-in-out, 0.3s right ease-in-out, 0.3s background-color ease-in-out;
-  transition: 0.2s opacity ease-in-out, 0.3s right ease-in-out, 0.3s background-color ease-in-out;
   position: relative;
   width: 1280px;
   height: 40px;
 }
 
-/* line 177, ../sass/partials/_base.scss */
+/* line 182, ../sass/partials/_base.scss */
 .viz-designer-name {
   -webkit-transition: color 0.2s ease-in-out;
   -moz-transition: color 0.2s ease-in-out;
@@ -502,7 +506,7 @@
   font-size: 13px;
 }
 
-/* line 185, ../sass/partials/_base.scss */
+/* line 190, ../sass/partials/_base.scss */
 .viz-designer-job {
   display: block;
   margin: 0;
@@ -511,14 +515,14 @@
   font-size: 11px;
 }
 
-/* line 193, ../sass/partials/_base.scss */
+/* line 198, ../sass/partials/_base.scss */
 .viz-designer-header-mod {
   left: 47px;
   padding-right: 35px;
   margin-top: 1px;
 }
 
-/* line 200, ../sass/partials/_base.scss */
+/* line 205, ../sass/partials/_base.scss */
 .viz-vs {
   -webkit-transition: opacity 0.2s ease-in-out;
   -moz-transition: opacity 0.2s ease-in-out;
@@ -1069,10 +1073,6 @@
 
 /* line 152, ../sass/partials/_bracket.scss */
 .viz-bracket-info-mod {
-  -webkit-transition: 0.3s top ease-in-out, 0.3s left ease-in-out, 0.3s width ease-in-out;
-  -moz-transition: 0.3s top ease-in-out, 0.3s left ease-in-out, 0.3s width ease-in-out;
-  -o-transition: 0.3s top ease-in-out, 0.3s left ease-in-out, 0.3s width ease-in-out;
-  transition: 0.3s top ease-in-out, 0.3s left ease-in-out, 0.3s width ease-in-out;
   position: absolute;
   top: 20px;
   left: 390px;
@@ -1082,47 +1082,94 @@
   width: 160px;
   height: 76px;
 }
+/* line 159, ../sass/partials/_bracket.scss */
+.viz-bracket-info-mod:after, .viz-bracket-info-mod:before {
+  left: 100%;
+  top: 25px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  display: none;
+}
+/* line 170, ../sass/partials/_bracket.scss */
+.viz-bracket-info-mod:after {
+  border-color: transparent;
+  border-left-color: white;
+  border-width: 15px;
+  margin-top: -15px;
+}
+/* line 176, ../sass/partials/_bracket.scss */
+.viz-bracket-info-mod:before {
+  border-color: transparent;
+  border-left-color: #c1bcaf;
+  border-width: 16px;
+  margin-top: -16px;
+}
 
-/* line 162, ../sass/partials/_bracket.scss */
+/* line 185, ../sass/partials/_bracket.scss */
+.viz-bracket-info-left:after, .viz-bracket-info-left:before {
+  right: 100%;
+  left: auto;
+}
+/* line 189, ../sass/partials/_bracket.scss */
+.viz-bracket-info-left:after {
+  border-left-color: transparent;
+  border-right-color: white;
+}
+/* line 193, ../sass/partials/_bracket.scss */
+.viz-bracket-info-left:before {
+  border-left-color: transparent;
+  border-right-color: #c1bcaf;
+}
+
+/* line 199, ../sass/partials/_bracket.scss */
 .viz-info-initiated {
   width: 260px;
   height: auto;
   border: 1px solid #ccc6b9;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+}
+/* line 204, ../sass/partials/_bracket.scss */
+.viz-info-initiated:after, .viz-info-initiated:before {
+  display: block;
 }
 
-/* line 168, ../sass/partials/_bracket.scss */
+/* line 209, ../sass/partials/_bracket.scss */
 .viz-info-instructions {
   font-size: 12px;
   text-align: center;
   margin: 0;
 }
 
-/* line 174, ../sass/partials/_bracket.scss */
+/* line 215, ../sass/partials/_bracket.scss */
 .viz-info-designer-wrapper {
   position: relative;
   display: none;
 }
 
-/* line 179, ../sass/partials/_bracket.scss */
+/* line 220, ../sass/partials/_bracket.scss */
 .viz-bracket-header-wrapper {
   display: table;
 }
 
-/* line 183, ../sass/partials/_bracket.scss */
+/* line 224, ../sass/partials/_bracket.scss */
 .viz-bracket-copy-mod {
   display: table-cell;
   vertical-align: middle;
   padding-left: 7px;
 }
 
-/* line 189, ../sass/partials/_bracket.scss */
+/* line 230, ../sass/partials/_bracket.scss */
 .viz-info-designer-header-mod {
   position: absolute;
   top: 5px;
   left: 47px;
 }
 
-/* line 195, ../sass/partials/_bracket.scss */
+/* line 236, ../sass/partials/_bracket.scss */
 .viz-bracket-designer-description {
   margin: 0px;
   padding: 10px 0 0;
@@ -1132,7 +1179,7 @@
   line-height: 140%;
 }
 
-/* line 204, ../sass/partials/_bracket.scss */
+/* line 245, ../sass/partials/_bracket.scss */
 .viz-bracket-winner-mod {
   position: absolute;
   top: 218px;
@@ -1141,7 +1188,7 @@
   width: 80px;
 }
 
-/* line 210, ../sass/partials/_bracket.scss */
+/* line 251, ../sass/partials/_bracket.scss */
 .viz-champion-headshot-wrap {
   float: none;
   margin: 0 auto 7px;
@@ -1153,7 +1200,7 @@
   border-radius: 50%;
 }
 
-/* line 221, ../sass/partials/_bracket.scss */
+/* line 262, ../sass/partials/_bracket.scss */
 .viz-champion-headshot {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1165,13 +1212,13 @@
   width: 60px;
 }
 
-/* line 226, ../sass/partials/_bracket.scss */
+/* line 267, ../sass/partials/_bracket.scss */
 .viz-champion-info-wrap {
   border-top: 1px solid #99948a;
   padding: 7px 0 0;
 }
 
-/* line 231, ../sass/partials/_bracket.scss */
+/* line 272, ../sass/partials/_bracket.scss */
 .viz-champion-seed {
   margin: 0;
   color: #99948a;
@@ -1180,7 +1227,7 @@
   font-size: 12px;
 }
 
-/* line 239, ../sass/partials/_bracket.scss */
+/* line 280, ../sass/partials/_bracket.scss */
 .viz-champion-name {
   display: none;
   padding: 0;
@@ -1188,13 +1235,13 @@
   font-size: 12px;
 }
 
-/* line 246, ../sass/partials/_bracket.scss */
+/* line 287, ../sass/partials/_bracket.scss */
 .viz-champion-label {
   margin: 0;
   font-size: 10px;
 }
 
-/* line 254, ../sass/partials/_bracket.scss */
+/* line 295, ../sass/partials/_bracket.scss */
 .viz-bracket-elbow {
   -webkit-transition: 0.3s stroke-width ease-in, 0.2s stroke ease-in;
   -moz-transition: 0.3s stroke-width ease-in, 0.2s stroke ease-in;
@@ -1205,27 +1252,27 @@
   stroke: #99948a;
 }
 
-/* line 261, ../sass/partials/_bracket.scss */
+/* line 302, ../sass/partials/_bracket.scss */
 .viz-bracket-designer-name {
   font-size: 11px;
   cursor: pointer;
   letter-spacing: .25px;
 }
 
-/* line 267, ../sass/partials/_bracket.scss */
+/* line 308, ../sass/partials/_bracket.scss */
 .viz-bracket-designer-loser {
   text-decoration: line-through;
   fill: #99948a;
 }
 
-/* line 272, ../sass/partials/_bracket.scss */
+/* line 313, ../sass/partials/_bracket.scss */
 .viz-bracket-seed {
   font-weight: 300;
   font-family: "FCKaiserCond", Helvetica, Arial, sans-serif;
   fill: #99948a;
 }
 
-/* line 278, ../sass/partials/_bracket.scss */
+/* line 319, ../sass/partials/_bracket.scss */
 .viz-active-path {
   -webkit-transition: 0.3s stroke-width ease-in, 0.2s stroke ease-in;
   -moz-transition: 0.3s stroke-width ease-in, 0.2s stroke ease-in;
@@ -1235,7 +1282,7 @@
   stroke: #33312e;
 }
 
-/* line 284, ../sass/partials/_bracket.scss */
+/* line 325, ../sass/partials/_bracket.scss */
 .viz-bracket-left-finals-surrogate {
   position: absolute;
   width: 100px;

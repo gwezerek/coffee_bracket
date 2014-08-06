@@ -120,6 +120,12 @@
 		.viz-vs {
 			display: block;
 		}
+		.viz-designer-description {
+			padding: 10px 0 0;
+		}
+	}
+	&:nth-of-type(1) {
+		padding: 0 0 5px;
 	}
 	&:last-of-type {
 		padding-bottom: 0;
@@ -168,7 +174,6 @@
 // Supercute img tag sprites hack
 .viz-headshot {
 	@include user-select;
-	@include transition(0.2s opacity ease-in-out, 0.3s right ease-in-out, 0.3s background-color ease-in-out);
 	position: relative;
 	width: 1280px;
 	height: 40px;
