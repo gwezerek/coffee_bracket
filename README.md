@@ -22,8 +22,9 @@
 
 
 ## To Set Quiz Up
-**This section needs work. Will revisit after project to detail how to extend the work.**
-* Create Google Spreadsheet from template
-* Have editor fill in column headers and populate rows
-* Run GOOGLE APP SERVICE that transforms that spreadsheet into a Google quiz
-* Get the url of that quiz and put it into the url spots in the formulas for the first three columns (A1, B1, C1)
+* Create a Google quiz with one multiple choice question that has all of the competitors as options
+* Publish that quiz and grab its unique PUBKEY from the url
+* Store https://docs.google.com/forms/d/KEYGOESHERE/formResponse as the formURL var in the js file
+* Visit the survey online and copy the form element html
+* In the html, replace the input element's name and id attributes with the value from the input's value from the html you copied
+* Test to make sure the voting works
