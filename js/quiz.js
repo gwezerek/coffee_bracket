@@ -411,8 +411,9 @@ $(".viz-bracket").on("click", ".viz-bracket-designer-name", function() {
 	var pozLeft = parseInt(position.match(/\d+/)[0]);
 	var pozTop = parseInt(position.match( /,\d+/)[0].replace(",",""));
 
+	infoMod.find(".viz-info-instructions").hide();
+
 	if (bracket.hasClass("viz-bracket-left")) {
-		infoMod.addClass("viz-bracket-info-left");
 		if (node.hasClass("viz-leaf")) {
 			pozLeft += 130;
 			pozTop -= 24;
@@ -431,89 +432,90 @@ $(".viz-bracket").on("click", ".viz-bracket-designer-name", function() {
 		}
 	}
 
+	window.setTimeout(function() {
 
-		infoMod.find(".viz-info-instructions").fadeOut(200);
+		if (bracket.hasClass("viz-bracket-left")) {
+			infoMod.addClass("viz-bracket-info-left");
+		}
 
-		window.setTimeout(function() {
+		infoMod.addClass("viz-info-initiated");
+		infoMod.fadeIn(200);
+		infoMod.css({
+			"top": pozTop + "px",
+			"left": pozLeft + "px"
+		});
+		infoMod.find(".viz-headshot").css({
+			"right": 40 * originalIndex + "px",
+			"background-color": divisionColor[colorsIndex]
+		});
+		infoMod.find(".viz-designer-name").html(divisionObj.name);
+		infoMod.find(".viz-designer-job").html("(" + divisionObj.rank + ") " + divisionObj.job);
+		infoMod.find(".viz-bracket-designer-description").html(divisionObj.description);
+		infoMod.find(".viz-info-designer-wrapper").fadeIn(1000);
+	}, 200);
 
-			infoMod.addClass("viz-info-initiated");
-			infoMod.fadeIn(200);
-			infoMod.css({
-				"top": pozTop + "px",
-				"left": pozLeft + "px"
-			});
-			infoMod.find(".viz-headshot").css({
-				"right": 40 * originalIndex + "px",
-				"background-color": divisionColor[colorsIndex]
-			});
-			infoMod.find(".viz-designer-name").html(divisionObj.name);
-			infoMod.find(".viz-designer-job").html("(" + divisionObj.rank + ") " + divisionObj.job);
-			infoMod.find(".viz-bracket-designer-description").html(divisionObj.description);
-			infoMod.find(".viz-info-designer-wrapper").fadeIn(1000);
-		}, 200);
-
-	});
+});
 
 
 // Special case for surrogate
 // This code could easily be refactored into the handler above
 // But it's after midnight.
 
-$(".viz-bracket-left-finals-surrogate").on("click", function() {
+// $(".viz-bracket-left-finals-surrogate").on("click", function() {
 
-	var originalIndex = this.dataset.originalindex;
-	var divisionObj = data[originalIndex];
-	var infoMod = $(".viz-bracket-info-mod");
-	var colorsIndex = Math.floor(originalIndex / (data.length / 4));
+// 	var originalIndex = this.dataset.originalindex;
+// 	var divisionObj = data[originalIndex];
+// 	var infoMod = $(".viz-bracket-info-mod");
+// 	var colorsIndex = Math.floor(originalIndex / (data.length / 4));
 
-	// Variables for tooltip positioning
-	var forcedTarget = $(".viz-bracket-designer-name").first();
-	var bracket = forcedTarget.closest(".viz-bracket-wrapper");
-	var node = forcedTarget.parent()[0];
-	var position = forcedTarget.parent().attr("transform").replace("translate(","");
-		var pozLeft = parseInt(position.match(/\d+/)[0]);
-		var pozTop = parseInt(position.match( /,\d+/)[0].replace(",",""));
+// 	// Variables for tooltip positioning
+// 	var forcedTarget = $(".viz-bracket-designer-name").first();
+// 	var bracket = forcedTarget.closest(".viz-bracket-wrapper");
+// 	var node = forcedTarget.parent()[0];
+// 	var position = forcedTarget.parent().attr("transform").replace("translate(","");
+// 		var pozLeft = parseInt(position.match(/\d+/)[0]);
+// 		var pozTop = parseInt(position.match( /,\d+/)[0].replace(",",""));
 
-		if (bracket.hasClass("viz-bracket-left")) {
-			if (node.hasClass("viz-leaf")) {
-				pozLeft += 10;
-				pozTop -= 36;
-			} else if (node.hasClass("viz-inner")) {
-				pozLeft += 15;
-				pozTop -= 24;
-			}
-		} else if (bracket.hasClass("viz-bracket-right")) {
-			if (node.hasClass("viz-leaf")) {
-				pozLeft += 260;
-				pozTop -= 36;
-			} else if (node.hasClass("viz-inner")) {
-				pozLeft += 255;
-				pozTop -= 25;
-			}
-		}
+// 		if (bracket.hasClass("viz-bracket-left")) {
+// 			if (node.hasClass("viz-leaf")) {
+// 				pozLeft += 10;
+// 				pozTop -= 36;
+// 			} else if (node.hasClass("viz-inner")) {
+// 				pozLeft += 15;
+// 				pozTop -= 24;
+// 			}
+// 		} else if (bracket.hasClass("viz-bracket-right")) {
+// 			if (node.hasClass("viz-leaf")) {
+// 				pozLeft += 260;
+// 				pozTop -= 36;
+// 			} else if (node.hasClass("viz-inner")) {
+// 				pozLeft += 255;
+// 				pozTop -= 25;
+// 			}
+// 		}
 
 
-		infoMod.find(".viz-info-instructions").fadeOut(200);
+// 		infoMod.find(".viz-info-instructions").hide();
 
-		window.setTimeout(function() {
+// 		window.setTimeout(function() {
 
-			infoMod.addClass("viz-info-initiated");
-			infoMod.fadeIn(200);
-			infoMod.css({
-				"top": pozTop + "px",
-				"left": pozLeft + "px"
-			});
-			infoMod.find(".viz-headshot").css({
-				"right": 40 * originalIndex + "px",
-				"background-color": divisionColor[colorsIndex]
-			});
-			infoMod.find(".viz-designer-name").html(divisionObj.name);
-			infoMod.find(".viz-designer-job").html("(" + divisionObj.rank + ") " + divisionObj.job);
-			infoMod.find(".viz-bracket-designer-description").html(divisionObj.description);
-			infoMod.find(".viz-info-designer-wrapper").fadeIn(1000);
-		}, 200);
+// 			infoMod.addClass("viz-info-initiated");
+// 			infoMod.fadeIn(200);
+// 			infoMod.css({
+// 				"top": pozTop + "px",
+// 				"left": pozLeft + "px"
+// 			});
+// 			infoMod.find(".viz-headshot").css({
+// 				"right": 40 * originalIndex + "px",
+// 				"background-color": divisionColor[colorsIndex]
+// 			});
+// 			infoMod.find(".viz-designer-name").html(divisionObj.name);
+// 			infoMod.find(".viz-designer-job").html("(" + divisionObj.rank + ") " + divisionObj.job);
+// 			infoMod.find(".viz-bracket-designer-description").html(divisionObj.description);
+// 			infoMod.find(".viz-info-designer-wrapper").fadeIn(1000);
+// 		}, 200);
 
-	});
+// 	});
 
 // Hiding the info mod if someone clicks off it
 $(document).click(function(e) {
@@ -521,7 +523,6 @@ $(document).click(function(e) {
 		$(".viz-info-initiated").fadeOut(200);
 	}
 });
-
 
 
 
@@ -647,11 +648,8 @@ function populateQuiz(data) {
         // Fade out the losers
         setLosers(divisionRound, $this);
 
-        // Show and hide the right buttons
-            	console.log(divisionRoundArray);
-
+        // Show and hide  right buttons
         setButtons(divisionRound, divisionRoundArray, $this);
-
 
       });
 }
