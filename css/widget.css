@@ -925,6 +925,12 @@
 }
 
 /* line 246, ../sass/partials/_bracket.scss */
+.viz-disclaimer {
+  margin: 5px 0 0;
+  font-style: italic;
+}
+
+/* line 251, ../sass/partials/_bracket.scss */
 .viz-bracket-winner-mod {
   position: absolute;
   top: 225px;
@@ -933,7 +939,7 @@
   width: 80px;
 }
 
-/* line 252, ../sass/partials/_bracket.scss */
+/* line 257, ../sass/partials/_bracket.scss */
 .viz-champion-headshot-wrap {
   float: none;
   margin: 0 auto 7px;
@@ -945,7 +951,7 @@
   border-radius: 50%;
 }
 
-/* line 263, ../sass/partials/_bracket.scss */
+/* line 268, ../sass/partials/_bracket.scss */
 .viz-champion-headshot {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -957,13 +963,13 @@
   width: 60px;
 }
 
-/* line 268, ../sass/partials/_bracket.scss */
+/* line 273, ../sass/partials/_bracket.scss */
 .viz-champion-info-wrap {
   border-top: 1px solid #99948a;
   padding: 7px 0 0;
 }
 
-/* line 273, ../sass/partials/_bracket.scss */
+/* line 278, ../sass/partials/_bracket.scss */
 .viz-champion-seed {
   margin: 0;
   color: #99948a;
@@ -972,7 +978,7 @@
   font-size: 12px;
 }
 
-/* line 281, ../sass/partials/_bracket.scss */
+/* line 286, ../sass/partials/_bracket.scss */
 .viz-champion-name {
   display: none;
   padding: 0;
@@ -980,13 +986,13 @@
   font-size: 12px;
 }
 
-/* line 288, ../sass/partials/_bracket.scss */
+/* line 293, ../sass/partials/_bracket.scss */
 .viz-champion-label {
   margin: 0;
   font-size: 10px;
 }
 
-/* line 296, ../sass/partials/_bracket.scss */
+/* line 301, ../sass/partials/_bracket.scss */
 .viz-bracket-elbow {
   -webkit-transition: 0.3s stroke-width ease-in, 0.2s stroke ease-in;
   -moz-transition: 0.3s stroke-width ease-in, 0.2s stroke ease-in;
@@ -997,27 +1003,27 @@
   stroke: #99948a;
 }
 
-/* line 303, ../sass/partials/_bracket.scss */
+/* line 308, ../sass/partials/_bracket.scss */
 .viz-bracket-designer-name {
   font-size: 11px;
   cursor: pointer;
   letter-spacing: .25px;
 }
 
-/* line 309, ../sass/partials/_bracket.scss */
+/* line 314, ../sass/partials/_bracket.scss */
 .viz-bracket-designer-loser {
   text-decoration: line-through;
   fill: #99948a;
 }
 
-/* line 314, ../sass/partials/_bracket.scss */
+/* line 319, ../sass/partials/_bracket.scss */
 .viz-bracket-seed {
   font-weight: 300;
   font-family: "FCKaiserCond", Helvetica, Arial, sans-serif;
   fill: #99948a;
 }
 
-/* line 320, ../sass/partials/_bracket.scss */
+/* line 325, ../sass/partials/_bracket.scss */
 .viz-active-path {
   -webkit-transition: 0.3s stroke-width ease-in, 0.2s stroke ease-in;
   -moz-transition: 0.3s stroke-width ease-in, 0.2s stroke ease-in;
@@ -1027,7 +1033,7 @@
   stroke: #33312e;
 }
 
-/* line 326, ../sass/partials/_bracket.scss */
+/* line 331, ../sass/partials/_bracket.scss */
 .viz-bracket-left-finals-surrogate {
   position: absolute;
   width: 100px;

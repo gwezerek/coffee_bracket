@@ -243,6 +243,11 @@
 	line-height: 140%;
 }
 
+.viz-disclaimer {
+	margin: 5px 0 0;
+	font-style: italic;
+}
+
 .viz-bracket-winner-mod {
 	@include absolute(225px n n 430px);
 	text-align: center;
