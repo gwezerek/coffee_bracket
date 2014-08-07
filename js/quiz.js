@@ -8,6 +8,9 @@ var i = 0;
 var formURL = "https://docs.google.com/forms/d/1Vt0gCO1voI1DV49tWkHirgxkW7mIRapsL3SttzD90YQ/formResponse"; // Example: "https://docs.google.com/forms/d/KEYGOESHERE/formResponse"
 var spreadsheetURL = "data/competitors.tsv";
 
+// For pym
+var pymChild = new pym.Child();
+
 // For template
 var vizEven = false;
 var vizQuiz = true;
@@ -343,6 +346,7 @@ $(".viz-container").on("click", ".viz-choice-item", function() {
 
 	$(".viz-designer-description").not(selectedDescription).slideUp(200);
 	selectedDescription.slideToggle(200);
+	pymChild.sendHeightToParent();
 });
 
 // Stops voting from showing the description the first time
@@ -449,6 +453,7 @@ $(".viz-bracket").on("click", ".viz-bracket-designer-name", function() {
 		infoMod.find(".viz-designer-job").html("(" + divisionObj.rank + ") " + divisionObj.job);
 		infoMod.find(".viz-bracket-designer-description").html(divisionObj.description);
 		infoMod.find(".viz-info-designer-wrapper").fadeIn(1000);
+		pymChild.sendHeightToParent();
 	}, 200);
 
 });
@@ -648,6 +653,8 @@ function populateQuiz(data) {
         // Show and hide  right buttons
         setButtons(divisionRound, divisionRoundArray, $this);
 
+    		pymChild.sendHeightToParent();
+
       });
 }
 
@@ -669,6 +676,7 @@ function convertAbs(designers, oldRoundNumber) {
 	designers.find(".viz-designer-description").slideUp(200);
 	designers.addClass("viz-transition");
 	convertCompetitors(designers, designerSpecs);
+	pymChild.sendHeightToParent();
 }
 
 

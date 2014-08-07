@@ -545,6 +545,46 @@
   padding-top: 1px;
 }
 
+/* line 226, ../sass/partials/_base.scss */
+.viz-division-1-text {
+  color: #f2d46d;
+}
+
+/* line 230, ../sass/partials/_base.scss */
+.viz-division-2-text {
+  color: #80bdb6;
+}
+
+/* line 234, ../sass/partials/_base.scss */
+.viz-division-3-text {
+  color: #e09d8b;
+}
+
+/* line 238, ../sass/partials/_base.scss */
+.viz-division-4-text {
+  color: #f0bd89;
+}
+
+/* line 242, ../sass/partials/_base.scss */
+.viz-division-1-img {
+  background-color: #f2d46d;
+}
+
+/* line 246, ../sass/partials/_base.scss */
+.viz-division-2-img {
+  background-color: #80bdb6;
+}
+
+/* line 250, ../sass/partials/_base.scss */
+.viz-division-3-img {
+  background-color: #e09d8b;
+}
+
+/* line 254, ../sass/partials/_base.scss */
+.viz-division-4-img {
+  background-color: #f0bd89;
+}
+
 @media (min-width: 620px) {
   /* line 7, ../sass/partials/_quiz.scss */
   .viz-quiz-wrapper {
@@ -1319,44 +1359,4 @@ body {
   body {
     padding: 30px 20px;
   }
-}
-
-/* line 47, ../sass/site.scss */
-.viz-division-1-text {
-  color: #f2d46d;
-}
-
-/* line 51, ../sass/site.scss */
-.viz-division-2-text {
-  color: #80bdb6;
-}
-
-/* line 55, ../sass/site.scss */
-.viz-division-3-text {
-  color: #e09d8b;
-}
-
-/* line 59, ../sass/site.scss */
-.viz-division-4-text {
-  color: #f0bd89;
-}
-
-/* line 63, ../sass/site.scss */
-.viz-division-1-img {
-  background-color: #f2d46d;
-}
-
-/* line 67, ../sass/site.scss */
-.viz-division-2-img {
-  background-color: #80bdb6;
-}
-
-/* line 71, ../sass/site.scss */
-.viz-division-3-img {
-  background-color: #e09d8b;
-}
-
-/* line 75, ../sass/site.scss */
-.viz-division-4-img {
-  background-color: #f0bd89;
 }
