@@ -453,7 +453,7 @@
   *zoom: 1;
   position: relative;
 }
-/* line 38, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/gem/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .viz-header-wrapper:after {
   content: "";
   display: table;
@@ -542,45 +542,44 @@
   text-align: center;
   font-weight: 300;
   font-size: 10px;
-  padding-top: 1px;
 }
 
-/* line 226, ../sass/partials/_base.scss */
+/* line 225, ../sass/partials/_base.scss */
 .viz-division-1-text {
   color: #f2d46d;
 }
 
-/* line 230, ../sass/partials/_base.scss */
+/* line 229, ../sass/partials/_base.scss */
 .viz-division-2-text {
   color: #80bdb6;
 }
 
-/* line 234, ../sass/partials/_base.scss */
+/* line 233, ../sass/partials/_base.scss */
 .viz-division-3-text {
   color: #e09d8b;
 }
 
-/* line 238, ../sass/partials/_base.scss */
+/* line 237, ../sass/partials/_base.scss */
 .viz-division-4-text {
   color: #f0bd89;
 }
 
-/* line 242, ../sass/partials/_base.scss */
+/* line 241, ../sass/partials/_base.scss */
 .viz-division-1-img {
   background-color: #f2d46d;
 }
 
-/* line 246, ../sass/partials/_base.scss */
+/* line 245, ../sass/partials/_base.scss */
 .viz-division-2-img {
   background-color: #80bdb6;
 }
 
-/* line 250, ../sass/partials/_base.scss */
+/* line 249, ../sass/partials/_base.scss */
 .viz-division-3-img {
   background-color: #e09d8b;
 }
 
-/* line 254, ../sass/partials/_base.scss */
+/* line 253, ../sass/partials/_base.scss */
 .viz-division-4-img {
   background-color: #f0bd89;
 }
@@ -590,7 +589,7 @@
   .viz-quiz-wrapper {
     *zoom: 1;
   }
-  /* line 38, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/gem/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   .viz-quiz-wrapper:after {
     content: "";
     display: table;
@@ -725,7 +724,7 @@
   padding: 0;
   list-style-type: none;
 }
-/* line 38, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/gem/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .viz-division-list:after {
   content: "";
   display: table;
@@ -1087,28 +1086,28 @@
 /* line 129, ../sass/partials/_bracket.scss */
 .viz-division-1-border {
   background-color: #f2d46d;
-  top: 100px;
+  top: 95px;
   left: 0;
 }
 
 /* line 135, ../sass/partials/_bracket.scss */
 .viz-division-2-border {
   background-color: #80bdb6;
-  top: 370px;
+  top: 365px;
   left: 0;
 }
 
 /* line 141, ../sass/partials/_bracket.scss */
 .viz-division-3-border {
   background-color: #e09d8b;
-  top: 100px;
+  top: 95px;
   right: 0;
 }
 
 /* line 147, ../sass/partials/_bracket.scss */
 .viz-division-4-border {
   background-color: #f0bd89;
-  top: 370px;
+  top: 365px;
   right: 0;
 }
 

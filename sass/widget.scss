@@ -27,29 +27,29 @@
 // ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 // Pym styles
 // ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
-body {
-	padding: 0;
-}
+// body {
+// 	padding: 0;
+// }
 
-.viz-rankings {
-	max-width: none;
-}
+// .viz-rankings {
+// 	max-width: none;
+// }
 
-.viz-bracket {
-	margin: 0;
-}
+// .viz-bracket {
+// 	margin: 0;
+// }
 
-.viz-quiz {
-	margin: 0;
-}
+// .viz-quiz {
+// 	margin: 0;
+// }
 
 // ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 // FastCo Workarounds
 // ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
-.fc-widget {
-	margin-right: -312px;
-}
+// .fc-widget {
+// 	margin-right: -312px;
+// }
 
 #page .page-inner {
 	background-image: none;
@@ -64,21 +64,37 @@ body {
 	padding-left: 0;
 }
 
-#page.kind-longread #page-main .after-body {
-	margin: 0;
+#page.kind-longread #page-main {
+	.after-body {
+		margin: 0;
+	}
+	article.full-view .prose.body {
+		padding-right: 20px !important;
+		&:after {
+			// content: none;
+			right: 0;
+		}
+	}
+	article.full-view>header {
+		padding-right: 20px !important;
+		&:after {
+			// content: none;
+			right: 0;
+		}
+	}
 }
 
 #page .page-inner {
 	background-image: none;
 }
 
-#page.kind-longread #page-main article.full-view>header {
-	padding-right: 0 !important;
-}
+// #page.kind-longread #page-main article.full-view>header {
+// 	padding-right: 0 !important;
+// }
 
-#page.kind-longread #page-main article.full-view .prose.body {
-	padding-right: 0 !important;
-}
+// #page.kind-longread #page-main article.full-view .prose.body {
+// 	padding-right: 0 !important;
+// }
 
 #page-body {
 	padding: 0 20px;
@@ -90,6 +106,9 @@ body {
 	}
 	@media (min-width: $large) {
 		padding: 0 200px 0 20px;
+	}
+	article.full-view .body p:first-child:after {
+		content: none;
 	}
 }
 
@@ -147,11 +166,385 @@ body {
 	ul>li:before {
 		content: none;
 	}
+
+
+	// Base viz resets
+
+	.viz-graphic-text {
+		color: $bground-15;
+	}
+
+	.viz-interactive-text {
+		color: $bground-11;
+	}
+
+	.viz-product-text {
+		color: $bground-9;
+	}
+
+	.viz-architecture-text {
+		color: $bground-13;
+	}
+
+	// Keyed colors
+	// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+	.viz-division-1-text {
+		color: $coffee-color-1;
+	}
+
+	.viz-division-2-text {
+		color: $coffee-color-2;
+	}
+
+	.viz-division-3-text {
+		color: $coffee-color-3;
+	}
+
+	.viz-division-4-text {
+		color: $coffee-color-4;
+	}
+
+	.viz-division-1-img {
+		background-color: $coffee-color-1;
+	}
+
+	.viz-division-2-img {
+		background-color: $coffee-color-2;
+	}
+
+	.viz-division-3-img {
+		background-color: $coffee-color-3;
+	}
+
+	.viz-division-4-img {
+		background-color: $coffee-color-4;
+	}
+
+	.viz-title {
+		text-transform: none;
+		letter-spacing: normal;
+		font-weight: 500 !important;
+		font-size: 40px !important; 
+		font-family: $condensed;
+		line-height: 90% !important;
+		color: $txt-black;
+		-webkit-font-smoothing: antialiased;
+		margin-bottom: -4px !important;
+	}
+
+	// INTRO GRAF
+	.viz-native-copy {
+		line-height: 160%;
+		font-size: 15px;
+		margin-bottom: 24px;
+	}
+
+	// BRACKET
+
+	.viz-bracket {
+		margin: 24px 0;
+		margin-right: -312px;
+		background: white;
+	}
+
+	.viz-legend {
+	  margin: 0 0 0 4px;
+	  list-style-type: none !important;
+	  font-family: $sans;
+	}
+
+	.viz-legend-item {
+		position: static;
+		margin: 0 15px 5px 0;
+		padding: 0;
+		width: auto;
+		list-style-type: none !important;
+		font-size: 30px;
+		&:before {
+			margin-left: -5px;
+			padding-right: 2px;
+			content: "\002022";
+		}
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+
+	.viz-legend-item {
+		@include inline-block;
+		@include trans(0.2s, opacity, ease-in-out);
+		margin: 0 15px 5px 0;
+		background-color: $bground;
+		font-size: 36px;
+		line-height: 10%;
+		&:before {
+			margin-left: -5px;
+			padding-right: 2px;
+			color: inherit;
+			content: "\002022" !important;
+		}
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+
+	.viz-detail {
+		color: $med-gray;
+	}
+
+	.viz-bracket-date-list {
+		margin: 0 0 30px;
+	}
+
+	.viz-bracket-date {
+		position: absolute;
+		padding: 0;
+		font-size: 11px;
+		font-weight: 400;
+		color: $med-gray;
+		&:before {
+			content: none;
+		}
+		&:nth-of-type(1){
+			left: 0px;
+		}
+		&:nth-of-type(2){
+			left: 12%;
+		}
+		&:nth-of-type(3){
+			left: 23%;
+		}
+		&:nth-of-type(4){
+			left: 34%;
+		}
+		&:nth-of-type(5){
+			left: 47%;
+		}
+		&:nth-of-type(6){
+			right: 34%;
+		}
+		&:nth-of-type(7){
+			right: 23%;
+		}
+		&:nth-of-type(8){
+			right: 12%;
+		}
+		&:nth-of-type(9){
+			right: 0px;
+		}
+	}
+
+	.viz-bracket-competitor-name {
+		font-weight: 500;
+	}
+
+	.viz-info-instructions, .viz-info-instructions:first-child, .viz-info-instructions:first-line {
+		color: $txt-black;
+		font-size: 12px !important;
+		line-height: 110%;
+	}
+
+	.viz-headshot {
+		max-width: none;
+	}
+
+	.viz-designer-name, .viz-designer-job {
+		margin-bottom: 0;
+	}
+
+	.viz-bracket-designer-description, .viz-bracket-designer-description:first-child, .viz-bracket-designer-description:first-line {
+		margin-bottom: 0;
+		color: $med-gray;
+		font-size: 12px !important;
+		line-height: 140%;
+		font-weight: 300 !important;
+	}
+
+	.viz-designer-name, .viz-designer-name:first-child, .viz-designer-name:first-line {
+		margin-bottom: 2px;
+		color: $txt-black;
+		font-weight: 500 !important;
+		font-size: 15px !important;
+		line-height: 100%;
+	}
+
+	.viz-designer-job, .viz-designer-job:first-child, .viz-designer-job:first-line {
+		color: $med-gray;
+		font-size: 12px !important;
+		line-height: 120%;
+		font-weight: 300 !important;
+	}
+
+	.viz-champion-name, .viz-champion-name:first-child, .viz-champion-name:first-line {
+		margin: 0 0 5px;
+		font-weight: 500 !important;
+		font-size: 12px !important;
+		line-height: 80%;
+		color: $txt-black;
+	}
+
+	.viz-champion-seed {
+		font-weight: 300;
+	}
+
+	.viz-champion-headshot {
+		max-width: none;
+		width: 60px;
+	}
+
+	.viz-champion-label, .viz-champion-label:first-child, .viz-champion-label:first-line {
+		margin: 0;
+		color: $med-gray;
+		font-size: 10px !important;
+		line-height: 80%;
+	}
+
+	.viz-underline {
+		font-family: $sans !important;
+		color: $txt-black;
+		line-height: 160% !important;
+		font-size: 15px !important;
+	}
+
+
+
+
+	// QUIZ
+
+	.viz-quiz {
+		max-width: none;
+	}
+
+	.viz-choices-group {
+		margin: 0 0 20px;
+		list-style-type: none !important;
+		vertical-align: top;
+	}
+
+	.viz-choice-item {
+		position: static;
+		// margin-bottom: 0;
+		padding: 5px 0;
+		width: 100%;
+		list-style-type: none !important;
+		&:before {
+			content: none;
+		}
+		&:nth-child(2n) {
+			// margin-bottom: 0px;
+			border-top: 1px solid $light-gray;
+			.viz-vs {
+				display: block;
+			}
+			.viz-designer-description {
+				padding: 10px 0 0;
+			}
+		}
+		&:nth-of-type(1) {
+			padding: 0 0 5px;
+		}
+		&:last-of-type {
+			padding-bottom: 0;
+		}
+	}
+
+	.viz-division .viz-choice-loser {
+		margin-bottom: 0;
+		padding: 5px 0 0px;
+	}
+
+	.viz-vs {
+		color: $light-gray;
+		line-height: 120%;
+	}
+
+	.viz-submitted-alert {
+		margin: -25px 0 10px;
+		padding: 5px;
+		color: $light-gray;
+		font-size: 11px !important;
+	}
+
+	.viz-designer-description, .viz-designer-description:first-child, .viz-designer-description:first-line {
+		margin: 0px;
+		padding: 10px 0;
+		color: $med-gray;
+		font-size: 13px !important;
+		line-height: 140%;
+		font-weight: 300 !important;
+	}
+
+	.viz-choice-loser .viz-designer-name, .viz-choice-loser .viz-designer-name:first-child, .viz-choice-loser .viz-designer-name:first-line {
+		color: $med-gray !important;
+		font-weight: 300 !important;
+	}
+
+
+
+	// RANKINGS
+
+	.viz-rankings {
+		max-width: none;
+	}
+
+	.viz-division-finals {
+		width: 100%;
+		margin-bottom: 35px !important;
+		padding: 0;
+	}
+
+	.viz-division-list {
+		margin: 0;
+		padding: 0;
+		list-style-type: none !important;
+	}
+
+	.viz-division {
+		margin: 0 0 35px;
+	}
+
+	.viz-group-2 .viz-division:last-of-type {
+		margin-bottom: 0;
+	}
+
+
+	.viz-division-button {
+		border: none;
+	}
+
+	.viz-division-title {
+		text-transform: uppercase;
+		font-weight: 300 !important;
+		font-size: 11px !important;
+		line-height: 80% !important;
+		margin-bottom: 0;
+	}
+
+	.viz-division-name {
+		font-family: $sans;
+	}
+
+	.viz-division-round {
+		margin: 10px 0 16px;
+		color: $txt-black;
+		font-weight: 600 !important;
+		font-size: 22px !important;
+		font-family: $condensed !important;
+		letter-spacing: 1.5px;
+	}
+
+	.viz-division-designers-list {
+		padding: 0 10px;
+		margin: 0;
+		list-style-type: none;
+	}
+
+	.viz-transition {
+		position: absolute;
+	& .viz-vs {
+		opacity: 0;
+	}
 }
 
-
-
-
-
-
-
+}
