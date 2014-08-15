@@ -65,6 +65,7 @@
 
 .viz-choice-winner {
 	& .viz-quiz-target {
+		pointer-events: none;
 		background-position: 0 -50px;
 		opacity: 1;
 	}
@@ -72,6 +73,7 @@
 
 .viz-choice-loser {
 	& .viz-quiz-target {
+		pointer-events: none;
 		background-position: 0 -25px;
 	}
 	& .viz-designer-name {

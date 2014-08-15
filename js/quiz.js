@@ -308,7 +308,7 @@ $('.viz-quiz-wrapper').on('click', '.viz-quiz-target', function() {
 	var $this = $(this);
 	var winner = $this.closest('.viz-choice-item');
 	var winnerInput = winner.find('.viz-radio');
-	var loser = $this.closest('.viz-choice-item').siblings('.viz-choice-item');
+	var loser = winner.siblings('.viz-choice-item');
 	var loserTarget = loser.find('.viz-quiz-target');
 	var submittedAlert = $this.closest('.viz-choices-group').next('.viz-submitted-alert');
 
@@ -335,6 +335,8 @@ $('.viz-quiz-wrapper').on('click', '.viz-quiz-target', function() {
 		// Disable selected answer so it doesn't get sent
 		// When the user selects another answer
 		winnerInput.attr('disabled', true);
+		winner.off('click');
+		loser.off('click');
 
 	}, 2000);
 

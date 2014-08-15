@@ -518,7 +518,6 @@
 /* line 198, ../sass/partials/_base.scss */
 .viz-designer-header-mod {
   left: 47px;
-  padding-right: 35px;
   margin-top: 1px;
 }
 
@@ -658,20 +657,22 @@
 
 /* line 67, ../sass/partials/_quiz.scss */
 .viz-choice-winner .viz-quiz-target {
+  pointer-events: none;
   background-position: 0 -50px;
   opacity: 1;
 }
 
-/* line 74, ../sass/partials/_quiz.scss */
+/* line 75, ../sass/partials/_quiz.scss */
 .viz-choice-loser .viz-quiz-target {
+  pointer-events: none;
   background-position: 0 -25px;
 }
-/* line 77, ../sass/partials/_quiz.scss */
+/* line 79, ../sass/partials/_quiz.scss */
 .viz-choice-loser .viz-designer-name {
   color: #99948a;
   font-weight: 300;
 }
-/* line 81, ../sass/partials/_quiz.scss */
+/* line 83, ../sass/partials/_quiz.scss */
 .viz-choice-loser .viz-headshot {
   opacity: .3;
 }
@@ -978,7 +979,14 @@
   list-style-position: inside;
 }
 
-/* line 54, ../sass/partials/_bracket.scss */
+@media (max-width: 620px) {
+  /* line 54, ../sass/partials/_bracket.scss */
+  .viz-legend-ballot {
+    display: none;
+  }
+}
+
+/* line 60, ../sass/partials/_bracket.scss */
 .viz-legend-item {
   display: -moz-inline-stack;
   display: inline-block;
@@ -995,23 +1003,23 @@
   font-size: 36px;
   line-height: 40%;
 }
-/* line 61, ../sass/partials/_bracket.scss */
+/* line 67, ../sass/partials/_bracket.scss */
 .viz-legend-item:before {
   margin-left: -5px;
   padding-right: 2px;
   content: "\002022";
 }
-/* line 66, ../sass/partials/_bracket.scss */
+/* line 72, ../sass/partials/_bracket.scss */
 .viz-legend-item:last-of-type {
   margin-right: 0;
 }
 
-/* line 71, ../sass/partials/_bracket.scss */
+/* line 77, ../sass/partials/_bracket.scss */
 .viz-legend-text {
   vertical-align: middle;
 }
 
-/* line 75, ../sass/partials/_bracket.scss */
+/* line 81, ../sass/partials/_bracket.scss */
 .viz-bracket-date-list {
   position: relative;
   margin: 0 0 35px;
@@ -1019,7 +1027,7 @@
   list-style-type: none;
 }
 
-/* line 82, ../sass/partials/_bracket.scss */
+/* line 88, ../sass/partials/_bracket.scss */
 .viz-bracket-date {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1034,84 +1042,84 @@
   font-weight: 300;
   font-size: 11px;
 }
-/* line 90, ../sass/partials/_bracket.scss */
+/* line 96, ../sass/partials/_bracket.scss */
 .viz-bracket-date:nth-of-type(1) {
   left: 0px;
 }
-/* line 93, ../sass/partials/_bracket.scss */
+/* line 99, ../sass/partials/_bracket.scss */
 .viz-bracket-date:nth-of-type(2) {
   left: 13%;
 }
-/* line 96, ../sass/partials/_bracket.scss */
+/* line 102, ../sass/partials/_bracket.scss */
 .viz-bracket-date:nth-of-type(3) {
   left: 24%;
 }
-/* line 99, ../sass/partials/_bracket.scss */
+/* line 105, ../sass/partials/_bracket.scss */
 .viz-bracket-date:nth-of-type(4) {
   left: 36%;
 }
-/* line 102, ../sass/partials/_bracket.scss */
+/* line 108, ../sass/partials/_bracket.scss */
 .viz-bracket-date:nth-of-type(5) {
   left: 47%;
 }
-/* line 105, ../sass/partials/_bracket.scss */
+/* line 111, ../sass/partials/_bracket.scss */
 .viz-bracket-date:nth-of-type(6) {
   right: 36%;
 }
-/* line 108, ../sass/partials/_bracket.scss */
+/* line 114, ../sass/partials/_bracket.scss */
 .viz-bracket-date:nth-of-type(7) {
   right: 24%;
 }
-/* line 111, ../sass/partials/_bracket.scss */
+/* line 117, ../sass/partials/_bracket.scss */
 .viz-bracket-date:nth-of-type(8) {
   right: 13%;
 }
-/* line 114, ../sass/partials/_bracket.scss */
+/* line 120, ../sass/partials/_bracket.scss */
 .viz-bracket-date:nth-of-type(9) {
   right: 0px;
 }
 
-/* line 119, ../sass/partials/_bracket.scss */
+/* line 125, ../sass/partials/_bracket.scss */
 .viz-date-finished {
   text-decoration: line-through;
 }
 
-/* line 123, ../sass/partials/_bracket.scss */
+/* line 129, ../sass/partials/_bracket.scss */
 .viz-bracket-division-border {
   position: absolute;
   width: 3px;
   height: 245px;
 }
 
-/* line 129, ../sass/partials/_bracket.scss */
+/* line 135, ../sass/partials/_bracket.scss */
 .viz-division-1-border {
   background-color: #f2d46d;
   top: 95px;
   left: 0;
 }
 
-/* line 135, ../sass/partials/_bracket.scss */
+/* line 141, ../sass/partials/_bracket.scss */
 .viz-division-2-border {
   background-color: #80bdb6;
   top: 365px;
   left: 0;
 }
 
-/* line 141, ../sass/partials/_bracket.scss */
+/* line 147, ../sass/partials/_bracket.scss */
 .viz-division-3-border {
   background-color: #e09d8b;
   top: 95px;
   right: 0;
 }
 
-/* line 147, ../sass/partials/_bracket.scss */
+/* line 153, ../sass/partials/_bracket.scss */
 .viz-division-4-border {
   background-color: #f0bd89;
   top: 365px;
   right: 0;
 }
 
-/* line 153, ../sass/partials/_bracket.scss */
+/* line 159, ../sass/partials/_bracket.scss */
 .viz-bracket-info-mod {
   position: absolute;
   top: 20px;
@@ -1122,7 +1130,7 @@
   width: 160px;
   height: 76px;
 }
-/* line 160, ../sass/partials/_bracket.scss */
+/* line 166, ../sass/partials/_bracket.scss */
 .viz-bracket-info-mod:after, .viz-bracket-info-mod:before {
   left: 100%;
   top: 25px;
@@ -1134,14 +1142,14 @@
   pointer-events: none;
   display: none;
 }
-/* line 171, ../sass/partials/_bracket.scss */
+/* line 177, ../sass/partials/_bracket.scss */
 .viz-bracket-info-mod:after {
   border-color: transparent;
   border-left-color: white;
   border-width: 15px;
   margin-top: -15px;
 }
-/* line 177, ../sass/partials/_bracket.scss */
+/* line 183, ../sass/partials/_bracket.scss */
 .viz-bracket-info-mod:before {
   border-color: transparent;
   border-left-color: #c1bcaf;
@@ -1149,71 +1157,71 @@
   margin-top: -16px;
 }
 
-/* line 185, ../sass/partials/_bracket.scss */
+/* line 191, ../sass/partials/_bracket.scss */
 .viz-info-initiated {
   width: 260px;
   height: auto;
   border: 1px solid #ccc6b9;
   box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.15);
 }
-/* line 190, ../sass/partials/_bracket.scss */
+/* line 196, ../sass/partials/_bracket.scss */
 .viz-info-initiated:after, .viz-info-initiated:before {
   display: block;
 }
 
-/* line 195, ../sass/partials/_bracket.scss */
+/* line 201, ../sass/partials/_bracket.scss */
 .viz-bracket-info-left {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
 }
-/* line 197, ../sass/partials/_bracket.scss */
+/* line 203, ../sass/partials/_bracket.scss */
 .viz-bracket-info-left:after, .viz-bracket-info-left:before {
   right: 100%;
   left: auto;
 }
-/* line 201, ../sass/partials/_bracket.scss */
+/* line 207, ../sass/partials/_bracket.scss */
 .viz-bracket-info-left:after {
   border-left-color: transparent;
   border-right-color: white;
 }
-/* line 205, ../sass/partials/_bracket.scss */
+/* line 211, ../sass/partials/_bracket.scss */
 .viz-bracket-info-left:before {
   border-left-color: transparent;
   border-right-color: #c1bcaf;
 }
 
-/* line 211, ../sass/partials/_bracket.scss */
+/* line 217, ../sass/partials/_bracket.scss */
 .viz-info-instructions {
   font-size: 12px;
   text-align: center;
   margin: 0;
 }
 
-/* line 217, ../sass/partials/_bracket.scss */
+/* line 223, ../sass/partials/_bracket.scss */
 .viz-info-designer-wrapper {
   position: relative;
   display: none;
 }
 
-/* line 222, ../sass/partials/_bracket.scss */
+/* line 228, ../sass/partials/_bracket.scss */
 .viz-bracket-header-wrapper {
   display: table;
 }
 
-/* line 226, ../sass/partials/_bracket.scss */
+/* line 232, ../sass/partials/_bracket.scss */
 .viz-bracket-copy-mod {
   display: table-cell;
   vertical-align: middle;
   padding-left: 7px;
 }
 
-/* line 232, ../sass/partials/_bracket.scss */
+/* line 238, ../sass/partials/_bracket.scss */
 .viz-info-designer-header-mod {
   position: absolute;
   top: 5px;
   left: 47px;
 }
 
-/* line 238, ../sass/partials/_bracket.scss */
+/* line 244, ../sass/partials/_bracket.scss */
 .viz-bracket-designer-description {
   margin: 0px;
   padding: 10px 0 0;
@@ -1223,14 +1231,14 @@
   line-height: 140%;
 }
 
-/* line 247, ../sass/partials/_bracket.scss */
+/* line 253, ../sass/partials/_bracket.scss */
 .viz-disclaimer {
   display: block;
   margin: 5px 0 0;
   font-style: italic;
 }
 
-/* line 253, ../sass/partials/_bracket.scss */
+/* line 259, ../sass/partials/_bracket.scss */
 .viz-bracket-winner-mod {
   position: absolute;
   top: 225px;
@@ -1239,7 +1247,7 @@
   width: 80px;
 }
 
-/* line 259, ../sass/partials/_bracket.scss */
+/* line 265, ../sass/partials/_bracket.scss */
 .viz-champion-headshot-wrap {
   float: none;
   margin: 0 auto 7px;
@@ -1251,7 +1259,7 @@
   border-radius: 50%;
 }
 
-/* line 270, ../sass/partials/_bracket.scss */
+/* line 276, ../sass/partials/_bracket.scss */
 .viz-champion-headshot {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1263,13 +1271,13 @@
   width: 60px;
 }
 
-/* line 275, ../sass/partials/_bracket.scss */
+/* line 281, ../sass/partials/_bracket.scss */
 .viz-champion-info-wrap {
   border-top: 1px solid #99948a;
   padding: 7px 0 0;
 }
 
-/* line 280, ../sass/partials/_bracket.scss */
+/* line 286, ../sass/partials/_bracket.scss */
 .viz-champion-seed {
   margin: 0;
   color: #99948a;
@@ -1278,7 +1286,7 @@
   font-size: 12px;
 }
 
-/* line 288, ../sass/partials/_bracket.scss */
+/* line 294, ../sass/partials/_bracket.scss */
 .viz-champion-name {
   display: none;
   padding: 0;
@@ -1286,13 +1294,13 @@
   font-size: 12px;
 }
 
-/* line 295, ../sass/partials/_bracket.scss */
+/* line 301, ../sass/partials/_bracket.scss */
 .viz-champion-label {
   margin: 0;
   font-size: 10px;
 }
 
-/* line 303, ../sass/partials/_bracket.scss */
+/* line 309, ../sass/partials/_bracket.scss */
 .viz-bracket-elbow {
   -webkit-transition: 0.3s stroke-width ease-in, 0.2s stroke ease-in;
   -moz-transition: 0.3s stroke-width ease-in, 0.2s stroke ease-in;
@@ -1303,27 +1311,27 @@
   stroke: #99948a;
 }
 
-/* line 310, ../sass/partials/_bracket.scss */
+/* line 316, ../sass/partials/_bracket.scss */
 .viz-bracket-designer-name {
   font-size: 11px;
   cursor: pointer;
   letter-spacing: .25px;
 }
 
-/* line 316, ../sass/partials/_bracket.scss */
+/* line 322, ../sass/partials/_bracket.scss */
 .viz-bracket-designer-loser {
   text-decoration: line-through;
   fill: #99948a;
 }
 
-/* line 321, ../sass/partials/_bracket.scss */
+/* line 327, ../sass/partials/_bracket.scss */
 .viz-bracket-seed {
   font-weight: 300;
   font-family: "FCKaiserCond", Helvetica, Arial, sans-serif;
   fill: #99948a;
 }
 
-/* line 327, ../sass/partials/_bracket.scss */
+/* line 333, ../sass/partials/_bracket.scss */
 .viz-active-path {
   -webkit-transition: 0.3s stroke-width ease-in, 0.2s stroke ease-in;
   -moz-transition: 0.3s stroke-width ease-in, 0.2s stroke ease-in;
@@ -1333,7 +1341,7 @@
   stroke: #33312e;
 }
 
-/* line 333, ../sass/partials/_bracket.scss */
+/* line 339, ../sass/partials/_bracket.scss */
 .viz-bracket-left-finals-surrogate {
   position: absolute;
   width: 100px;
@@ -1418,101 +1426,130 @@
 }
 
 /* line 120, ../sass/widget.scss */
+#page.kind-longread #page-main article.full-view > header {
+  padding-bottom: 0;
+}
+
+/* line 124, ../sass/widget.scss */
+#page.kind-longread #page-main article.full-view > header .share-box-wrapper {
+  left: auto;
+  width: 200px;
+  right: -220px;
+}
+
+/* line 130, ../sass/widget.scss */
 .full-view .byline {
   display: none;
 }
 
-/* line 124, ../sass/widget.scss */
-.full-view > header .deck, .full-view > header .deck p {
+/* line 134, ../sass/widget.scss */
+.author-teaser {
+  line-height: 140%;
+  margin-bottom: 10px;
+}
+
+/* line 139, ../sass/widget.scss */
+#page.kind-longread #page-main article.full-view > header .deck p {
+  font-family: "MuseoSans", Helvetica, Arial, sans-serif;
+  font-size: 16px;
   font-weight: 500 !important;
   margin-bottom: 0;
 }
 
-/* line 133, ../sass/widget.scss */
+/* line 150, ../sass/widget.scss */
 .prose.body * {
   -webkit-font-smoothing: subpixel-antialiased;
 }
-/* line 137, ../sass/widget.scss */
+/* line 154, ../sass/widget.scss */
 .prose.body form {
   margin: 0 0 -15px 0;
 }
-/* line 141, ../sass/widget.scss */
+/* line 158, ../sass/widget.scss */
 .prose.body p, .prose.body p:first-child, .prose.body p:first-line {
   font-family: inherit !important;
   color: inherit;
   line-height: inherit;
   font-weight: inherit !important;
 }
-/* line 148, ../sass/widget.scss */
+/* line 165, ../sass/widget.scss */
 .prose.body label {
   margin: 0;
 }
-/* line 153, ../sass/widget.scss */
+/* line 170, ../sass/widget.scss */
 .prose.body ol {
   list-style-type: none;
   line-height: 100%;
 }
-/* line 158, ../sass/widget.scss */
+/* line 175, ../sass/widget.scss */
 .prose.body ol > li {
   width: auto;
 }
-/* line 162, ../sass/widget.scss */
+/* line 179, ../sass/widget.scss */
 .prose.body ol > li:before {
   position: static;
 }
-/* line 166, ../sass/widget.scss */
+/* line 183, ../sass/widget.scss */
+.prose.body ul {
+  font-family: "MuseoSans", Helvetica, Arial, sans-serif !important;
+}
+/* line 187, ../sass/widget.scss */
+.prose.body ul > li {
+  font-weight: 300;
+  color: inherit;
+}
+/* line 192, ../sass/widget.scss */
 .prose.body ul > li:before {
   content: none;
 }
-/* line 173, ../sass/widget.scss */
+/* line 199, ../sass/widget.scss */
 .prose.body .viz-graphic-text {
   color: #ff8a80;
 }
-/* line 177, ../sass/widget.scss */
+/* line 203, ../sass/widget.scss */
 .prose.body .viz-interactive-text {
   color: #b781ff;
 }
-/* line 181, ../sass/widget.scss */
+/* line 207, ../sass/widget.scss */
 .prose.body .viz-product-text {
   color: #819fff;
 }
-/* line 185, ../sass/widget.scss */
+/* line 211, ../sass/widget.scss */
 .prose.body .viz-architecture-text {
   color: #ff81f4;
 }
-/* line 192, ../sass/widget.scss */
+/* line 218, ../sass/widget.scss */
 .prose.body .viz-division-1-text {
   color: #f2d46d;
 }
-/* line 196, ../sass/widget.scss */
+/* line 222, ../sass/widget.scss */
 .prose.body .viz-division-2-text {
   color: #80bdb6;
 }
-/* line 200, ../sass/widget.scss */
+/* line 226, ../sass/widget.scss */
 .prose.body .viz-division-3-text {
   color: #e09d8b;
 }
-/* line 204, ../sass/widget.scss */
+/* line 230, ../sass/widget.scss */
 .prose.body .viz-division-4-text {
   color: #f0bd89;
 }
-/* line 208, ../sass/widget.scss */
+/* line 234, ../sass/widget.scss */
 .prose.body .viz-division-1-img {
   background-color: #f2d46d;
 }
-/* line 212, ../sass/widget.scss */
+/* line 238, ../sass/widget.scss */
 .prose.body .viz-division-2-img {
   background-color: #80bdb6;
 }
-/* line 216, ../sass/widget.scss */
+/* line 242, ../sass/widget.scss */
 .prose.body .viz-division-3-img {
   background-color: #e09d8b;
 }
-/* line 220, ../sass/widget.scss */
+/* line 246, ../sass/widget.scss */
 .prose.body .viz-division-4-img {
   background-color: #f0bd89;
 }
-/* line 224, ../sass/widget.scss */
+/* line 250, ../sass/widget.scss */
 .prose.body .viz-title {
   text-transform: none;
   letter-spacing: normal;
@@ -1524,25 +1561,25 @@
   -webkit-font-smoothing: antialiased;
   margin-bottom: -4px !important;
 }
-/* line 237, ../sass/widget.scss */
+/* line 263, ../sass/widget.scss */
 .prose.body .viz-native-copy {
   line-height: 160%;
   font-size: 15px;
   margin-bottom: 24px;
 }
-/* line 245, ../sass/widget.scss */
+/* line 271, ../sass/widget.scss */
 .prose.body .viz-bracket {
   margin: 24px 0;
   margin-right: -312px;
   background: white;
 }
-/* line 251, ../sass/widget.scss */
+/* line 277, ../sass/widget.scss */
 .prose.body .viz-legend {
   margin: 0 0 0 4px;
   list-style-type: none !important;
   font-family: "FCZizouSans", Helvetica, Arial, sans-serif;
 }
-/* line 257, ../sass/widget.scss */
+/* line 283, ../sass/widget.scss */
 .prose.body .viz-legend-item {
   position: static;
   margin: 0 15px 5px 0;
@@ -1551,17 +1588,17 @@
   list-style-type: none !important;
   font-size: 30px;
 }
-/* line 264, ../sass/widget.scss */
+/* line 290, ../sass/widget.scss */
 .prose.body .viz-legend-item:before {
   margin-left: -5px;
   padding-right: 2px;
   content: "\002022";
 }
-/* line 269, ../sass/widget.scss */
+/* line 295, ../sass/widget.scss */
 .prose.body .viz-legend-item:last-of-type {
   margin-right: 0;
 }
-/* line 274, ../sass/widget.scss */
+/* line 300, ../sass/widget.scss */
 .prose.body .viz-legend-item {
   display: -moz-inline-stack;
   display: inline-block;
@@ -1578,26 +1615,26 @@
   font-size: 36px;
   line-height: 10%;
 }
-/* line 281, ../sass/widget.scss */
+/* line 307, ../sass/widget.scss */
 .prose.body .viz-legend-item:before {
   margin-left: -5px;
   padding-right: 2px;
   color: inherit;
   content: "\002022" !important;
 }
-/* line 287, ../sass/widget.scss */
+/* line 313, ../sass/widget.scss */
 .prose.body .viz-legend-item:last-of-type {
   margin-right: 0;
 }
-/* line 292, ../sass/widget.scss */
+/* line 318, ../sass/widget.scss */
 .prose.body .viz-detail {
   color: #99948a;
 }
-/* line 296, ../sass/widget.scss */
+/* line 322, ../sass/widget.scss */
 .prose.body .viz-bracket-date-list {
   margin: 0 0 30px;
 }
-/* line 300, ../sass/widget.scss */
+/* line 326, ../sass/widget.scss */
 .prose.body .viz-bracket-date {
   position: absolute;
   padding: 0;
@@ -1605,65 +1642,65 @@
   font-weight: 400;
   color: #99948a;
 }
-/* line 306, ../sass/widget.scss */
+/* line 332, ../sass/widget.scss */
 .prose.body .viz-bracket-date:before {
   content: none;
 }
-/* line 309, ../sass/widget.scss */
+/* line 335, ../sass/widget.scss */
 .prose.body .viz-bracket-date:nth-of-type(1) {
   left: 0px;
 }
-/* line 312, ../sass/widget.scss */
+/* line 338, ../sass/widget.scss */
 .prose.body .viz-bracket-date:nth-of-type(2) {
   left: 12%;
 }
-/* line 315, ../sass/widget.scss */
+/* line 341, ../sass/widget.scss */
 .prose.body .viz-bracket-date:nth-of-type(3) {
   left: 23%;
 }
-/* line 318, ../sass/widget.scss */
+/* line 344, ../sass/widget.scss */
 .prose.body .viz-bracket-date:nth-of-type(4) {
   left: 34%;
 }
-/* line 321, ../sass/widget.scss */
+/* line 347, ../sass/widget.scss */
 .prose.body .viz-bracket-date:nth-of-type(5) {
   left: 47%;
 }
-/* line 324, ../sass/widget.scss */
+/* line 350, ../sass/widget.scss */
 .prose.body .viz-bracket-date:nth-of-type(6) {
   right: 34%;
 }
-/* line 327, ../sass/widget.scss */
+/* line 353, ../sass/widget.scss */
 .prose.body .viz-bracket-date:nth-of-type(7) {
   right: 23%;
 }
-/* line 330, ../sass/widget.scss */
+/* line 356, ../sass/widget.scss */
 .prose.body .viz-bracket-date:nth-of-type(8) {
   right: 12%;
 }
-/* line 333, ../sass/widget.scss */
+/* line 359, ../sass/widget.scss */
 .prose.body .viz-bracket-date:nth-of-type(9) {
   right: 0px;
 }
-/* line 338, ../sass/widget.scss */
+/* line 364, ../sass/widget.scss */
 .prose.body .viz-bracket-competitor-name {
   font-weight: 500;
 }
-/* line 342, ../sass/widget.scss */
+/* line 368, ../sass/widget.scss */
 .prose.body .viz-info-instructions, .prose.body .viz-info-instructions:first-child, .prose.body .viz-info-instructions:first-line {
   color: #33312e;
   font-size: 12px !important;
   line-height: 110%;
 }
-/* line 348, ../sass/widget.scss */
+/* line 374, ../sass/widget.scss */
 .prose.body .viz-headshot {
   max-width: none;
 }
-/* line 352, ../sass/widget.scss */
+/* line 378, ../sass/widget.scss */
 .prose.body .viz-designer-name, .prose.body .viz-designer-job {
   margin-bottom: 0;
 }
-/* line 356, ../sass/widget.scss */
+/* line 382, ../sass/widget.scss */
 .prose.body .viz-bracket-designer-description, .prose.body .viz-bracket-designer-description:first-child, .prose.body .viz-bracket-designer-description:first-line {
   margin-bottom: 0;
   color: #99948a;
@@ -1671,22 +1708,22 @@
   line-height: 140%;
   font-weight: 300 !important;
 }
-/* line 364, ../sass/widget.scss */
+/* line 390, ../sass/widget.scss */
 .prose.body .viz-designer-name, .prose.body .viz-designer-name:first-child, .prose.body .viz-designer-name:first-line {
   margin-bottom: 2px;
   color: #33312e;
   font-weight: 500 !important;
-  font-size: 15px !important;
+  font-size: 14px !important;
   line-height: 100%;
 }
-/* line 372, ../sass/widget.scss */
+/* line 398, ../sass/widget.scss */
 .prose.body .viz-designer-job, .prose.body .viz-designer-job:first-child, .prose.body .viz-designer-job:first-line {
   color: #99948a;
   font-size: 12px !important;
   line-height: 120%;
   font-weight: 300 !important;
 }
-/* line 379, ../sass/widget.scss */
+/* line 405, ../sass/widget.scss */
 .prose.body .viz-champion-name, .prose.body .viz-champion-name:first-child, .prose.body .viz-champion-name:first-line {
   margin: 0 0 5px;
   font-weight: 500 !important;
@@ -1694,88 +1731,88 @@
   line-height: 80%;
   color: #33312e;
 }
-/* line 387, ../sass/widget.scss */
+/* line 413, ../sass/widget.scss */
 .prose.body .viz-champion-seed {
   font-weight: 300;
 }
-/* line 391, ../sass/widget.scss */
+/* line 417, ../sass/widget.scss */
 .prose.body .viz-champion-headshot {
   max-width: none;
   width: 60px;
 }
-/* line 396, ../sass/widget.scss */
+/* line 422, ../sass/widget.scss */
 .prose.body .viz-champion-label, .prose.body .viz-champion-label:first-child, .prose.body .viz-champion-label:first-line {
   margin: 0;
   color: #99948a;
   font-size: 10px !important;
   line-height: 80%;
 }
-/* line 403, ../sass/widget.scss */
+/* line 429, ../sass/widget.scss */
 .prose.body .viz-underline {
   font-family: "FCZizouSans", Helvetica, Arial, sans-serif !important;
   color: #33312e;
   line-height: 160% !important;
   font-size: 15px !important;
 }
-/* line 415, ../sass/widget.scss */
+/* line 441, ../sass/widget.scss */
 .prose.body .viz-quiz {
   max-width: none;
 }
-/* line 419, ../sass/widget.scss */
+/* line 445, ../sass/widget.scss */
 .prose.body .viz-choices-group {
   margin: 0 0 20px;
   list-style-type: none !important;
   vertical-align: top;
 }
-/* line 425, ../sass/widget.scss */
+/* line 451, ../sass/widget.scss */
 .prose.body .viz-choice-item {
   position: static;
   padding: 5px 0;
   width: 100%;
   list-style-type: none !important;
 }
-/* line 431, ../sass/widget.scss */
+/* line 457, ../sass/widget.scss */
 .prose.body .viz-choice-item:before {
   content: none;
 }
-/* line 434, ../sass/widget.scss */
+/* line 460, ../sass/widget.scss */
 .prose.body .viz-choice-item:nth-child(2n) {
   border-top: 1px solid #ccc6b9;
 }
-/* line 437, ../sass/widget.scss */
+/* line 463, ../sass/widget.scss */
 .prose.body .viz-choice-item:nth-child(2n) .viz-vs {
   display: block;
 }
-/* line 440, ../sass/widget.scss */
+/* line 466, ../sass/widget.scss */
 .prose.body .viz-choice-item:nth-child(2n) .viz-designer-description {
   padding: 10px 0 0;
 }
-/* line 444, ../sass/widget.scss */
+/* line 470, ../sass/widget.scss */
 .prose.body .viz-choice-item:nth-of-type(1) {
   padding: 0 0 5px;
 }
-/* line 447, ../sass/widget.scss */
+/* line 473, ../sass/widget.scss */
 .prose.body .viz-choice-item:last-of-type {
   padding-bottom: 0;
 }
-/* line 452, ../sass/widget.scss */
+/* line 478, ../sass/widget.scss */
 .prose.body .viz-division .viz-choice-loser {
   margin-bottom: 0;
   padding: 5px 0 0px;
 }
-/* line 457, ../sass/widget.scss */
+/* line 483, ../sass/widget.scss */
 .prose.body .viz-vs {
   color: #ccc6b9;
   line-height: 120%;
 }
-/* line 462, ../sass/widget.scss */
+/* line 488, ../sass/widget.scss */
 .prose.body .viz-submitted-alert {
   margin: -25px 0 10px;
   padding: 5px;
   color: #ccc6b9;
   font-size: 11px !important;
 }
-/* line 469, ../sass/widget.scss */
+/* line 495, ../sass/widget.scss */
 .prose.body .viz-designer-description, .prose.body .viz-designer-description:first-child, .prose.body .viz-designer-description:first-line {
   margin: 0px;
   padding: 10px 0;
@@ -1784,40 +1821,40 @@
   line-height: 140%;
   font-weight: 300 !important;
 }
-/* line 478, ../sass/widget.scss */
+/* line 504, ../sass/widget.scss */
 .prose.body .viz-choice-loser .viz-designer-name, .prose.body .viz-choice-loser .viz-designer-name:first-child, .prose.body .viz-choice-loser .viz-designer-name:first-line {
   color: #99948a !important;
   font-weight: 300 !important;
 }
-/* line 487, ../sass/widget.scss */
+/* line 513, ../sass/widget.scss */
 .prose.body .viz-rankings {
   max-width: none;
 }
-/* line 491, ../sass/widget.scss */
+/* line 517, ../sass/widget.scss */
 .prose.body .viz-division-finals {
   width: 100%;
   margin-bottom: 35px !important;
   padding: 0;
 }
-/* line 497, ../sass/widget.scss */
+/* line 523, ../sass/widget.scss */
 .prose.body .viz-division-list {
   margin: 0;
   padding: 0;
   list-style-type: none !important;
 }
-/* line 503, ../sass/widget.scss */
+/* line 529, ../sass/widget.scss */
 .prose.body .viz-division {
   margin: 0 0 35px;
 }
-/* line 507, ../sass/widget.scss */
+/* line 533, ../sass/widget.scss */
 .prose.body .viz-group-2 .viz-division:last-of-type {
   margin-bottom: 0;
 }
-/* line 512, ../sass/widget.scss */
+/* line 538, ../sass/widget.scss */
 .prose.body .viz-division-button {
   border: none;
 }
-/* line 516, ../sass/widget.scss */
+/* line 542, ../sass/widget.scss */
 .prose.body .viz-division-title {
   text-transform: uppercase;
   font-weight: 300 !important;
@@ -1825,11 +1862,11 @@
   line-height: 80% !important;
   margin-bottom: 0;
 }
-/* line 524, ../sass/widget.scss */
+/* line 550, ../sass/widget.scss */
 .prose.body .viz-division-name {
   font-family: "FCZizouSans", Helvetica, Arial, sans-serif;
 }
-/* line 528, ../sass/widget.scss */
+/* line 554, ../sass/widget.scss */
 .prose.body .viz-division-round {
   margin: 10px 0 16px;
   color: #33312e;
@@ -1838,17 +1875,17 @@
   font-family: "FCKaiserCond", Helvetica, Arial, sans-serif !important;
   letter-spacing: 1.5px;
 }
-/* line 537, ../sass/widget.scss */
+/* line 563, ../sass/widget.scss */
 .prose.body .viz-division-designers-list {
   padding: 0 10px;
   margin: 0;
   list-style-type: none;
 }
-/* line 543, ../sass/widget.scss */
+/* line 569, ../sass/widget.scss */
 .prose.body .viz-transition {
   position: absolute;
 }
-/* line 545, ../sass/widget.scss */
+/* line 571, ../sass/widget.scss */
 .prose.body .viz-transition .viz-vs {
   opacity: 0;
 }

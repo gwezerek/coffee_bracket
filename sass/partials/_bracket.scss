@@ -51,6 +51,12 @@
 	list-style-position: inside;
 }
 
+.viz-legend-ballot {
+	@media (max-width: $small) {
+		display: none;
+	}
+}
+
 .viz-legend-item {
 	@include inline-block;
 	@include trans(0.2s, opacity, ease-in-out);

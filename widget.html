@@ -73,6 +73,12 @@
             <header class="viz-content-header">
                 <div class="viz-overline-wrapper">
                     <h4 class="viz-title">Who's Winning</h4>
+                    <ol class="viz-legend viz-legend-ballot">
+                    	<li class="viz-legend-item viz-division-1-text"><span class="viz-legend-text viz-detail">Brew</span></li>
+                    	<li class="viz-legend-item viz-division-2-text"><span class="viz-legend-text viz-detail">Cold</span></li>
+                    	<li class="viz-legend-item viz-division-3-text"><span class="viz-legend-text viz-detail">Mixed</span></li>
+                    	<li class="viz-legend-item viz-division-4-text"><span class="viz-legend-text viz-detail">Shot</span></li>
+                    </ol>
                 </div>
                 <p class="viz-underline">Switch rounds to watch the cream rise to the top. You can tap on each designer to read more about his or her&nbsp;accomplishments.</p>
             </header>
@@ -160,6 +166,12 @@
             <header class="viz-content-header">
                 <div class="viz-overline-wrapper">
                     <h4 class="viz-title">Today's Ballot</h4>
+                    <ol class="viz-legend viz-legend-ballot">
+                    	<li class="viz-legend-item viz-division-1-text"><span class="viz-legend-text viz-detail">Brew</span></li>
+                    	<li class="viz-legend-item viz-division-2-text"><span class="viz-legend-text viz-detail">Cold</span></li>
+                    	<li class="viz-legend-item viz-division-3-text"><span class="viz-legend-text viz-detail">Mixed</span></li>
+                    	<li class="viz-legend-item viz-division-4-text"><span class="viz-legend-text viz-detail">Shot</span></li>
+                    </ol>
                 </div>
                 <p class="viz-underline">Click the circle next to the coffe you want to see move on to the next round.</p>
             </header>
@@ -197,8 +209,8 @@
                         <img src="http://d.fastcompany.net/asset_files/-/2014/08/11/logos.png" class="viz-headshot viz-division-<%= division_index %>-img" style="right:<%= 40 * original_index %>px"/>
                     </div>
                     <div class="viz-designer-header-mod">
-                        <p class="ss-choice-label viz-designer-name"><%= name %></p>
-                        <p class="ss-choice-label viz-designer-job">(<%= rank %>) <%= job %></p>
+                        <p class="ss-choice-label viz-designer-name"><%= job %></p>
+                        <p class="ss-choice-label viz-designer-job">(<%= rank %>) <%= name %></p>
                     </div>
                     <% if (vizQuiz == true) { %>
                         <span class="viz-quiz-target">&nbsp;</span>
@@ -230,7 +242,7 @@
                 var data = '';
                 var i = 0;
                 var formURL = 'https://docs.google.com/forms/d/1Vt0gCO1voI1DV49tWkHirgxkW7mIRapsL3SttzD90YQ/formResponse'; // Example: 'https://docs.google.com/forms/d/KEYGOESHERE/formResponse'
-                var spreadsheetURL = 'http://g.fastcompany.net/asset_files/-/2014/08/11/competitors.tsv';
+                var spreadsheetURL = 'http://g.fastcompany.net/asset_files/-/2014/08/15/competitors.tsv';
 
                 // For pym
 
@@ -527,38 +539,41 @@
 
                 // Vote functionality
                 $('.viz-quiz-wrapper').on('click', '.viz-quiz-target', function() {
-                    var $this = $(this);
-                    var winner = $this.closest('.viz-choice-item');
-                    var winnerInput = winner.find('.viz-radio');
-                    var loser = $this.closest('.viz-choice-item').siblings('.viz-choice-item');
-                    var loserTarget = loser.find('.viz-quiz-target');
-                    var submittedAlert = $this.closest('.viz-choices-group').next('.viz-submitted-alert');
+                	var $this = $(this);
 
-                    // Add classes
-                    loser.addClass('viz-choice-loser');
-                    winner.addClass('viz-choice-winner');
+                	var winner = $this.closest('.viz-choice-item');
+                	var winnerInput = winner.find('.viz-radio');
+                	var loser = winner.siblings('.viz-choice-item');
+                	var loserTarget = loser.find('.viz-quiz-target');
+                	var submittedAlert = $this.closest('.viz-choices-group').next('.viz-submitted-alert');
 
-                    // Remove handlers
-                    $this.off('click');
-                    loserTarget.off('click');
+                	// Add classes
+                	loser.addClass('viz-choice-loser');
+                	winner.addClass('viz-choice-winner');
 
-                    // Let the user know the vote was submitted
-                    submittedAlert.slideDown(200).delay(1000).slideUp(200);
+                	// Remove handlers
+                	$this.off('click');
+                	loserTarget.off('click');
 
-                    // Enable and select our answer, submit the quiz
-                    winnerInput.attr('disabled', false);
-                    winnerInput.attr('checked', true);
+                	// Let the user know the vote was submitted
+                	submittedAlert.slideDown(200).delay(1000).slideUp(200);
 
-                    // Delay form submission to give submittedAlert time to finish
-                    setTimeout(function() {
+                	// Enable and select our answer, submit the quiz
+                	winnerInput.attr('disabled', false);
+                	winnerInput.attr('checked', true);
 
-                        $('.viz-form').submit();
+                	// Delay form submission to give submittedAlert time to finish
+                	setTimeout(function() {
 
-                        // Disable selected answer so it doesn't get sent
-                        // When the user selects another answer
-                        winnerInput.attr('disabled', true);
+                		$('.viz-form').submit();
 
-                    }, 2000);
+                		// Disable selected answer so it doesn't get sent
+                		// When the user selects another answer
+                		winnerInput.attr('disabled', true);
+                		$('.viz-quiz-wrapper').off('click', winner);
+                		// loser.off('click');
+
+                	}, 2000);
 
                 });
 
