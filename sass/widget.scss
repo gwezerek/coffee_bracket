@@ -74,6 +74,12 @@
 			// content: none;
 			right: 0;
 		}
+        p {
+            line-height: normal !important;
+        }
+        .viz-division-round {
+            line-height: 45% !important;
+        }
 	}
 	article.full-view>header {
 		padding-right: 20px !important;
@@ -193,6 +199,9 @@
 		content: none;
 	}
 
+    .viz-article {
+        margin-top: 40px;
+    }
 
 	// Base viz resets
 
@@ -476,7 +485,7 @@
 	}
 
 	.viz-division .viz-choice-loser {
-		margin-bottom: 0;
+		margin-bottom: 5px;
 		padding: 5px 0 0px;
 	}
 
@@ -513,6 +522,10 @@
 	.viz-rankings {
 		max-width: none;
 	}
+
+    .viz-rankings .viz-choice-loser:nth-child(2n) {
+        margin-bottom: 0px;
+    }
 
 	.viz-division-finals {
 		width: 100%;

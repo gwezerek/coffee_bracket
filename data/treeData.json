@@ -19,7 +19,7 @@
 			                "level": "8",
 			                "parents": [
 				                {
-				                    "competitorIndex": "",
+				                    "competitorIndex": "0",
 				                    "lost": "false",
 				                    "level": "16",
 				                    "parents": [
@@ -30,19 +30,19 @@
 					                    },
 					                    {
 					                        "competitorIndex": "7",
-					                        "lost": "false",
+					                        "lost": "true",
 					                        "level": "32"
 					                    }
 				                    ]
 				                },
 				                {
-				                    "competitorIndex": "",
+				                    "competitorIndex": "4",
 				                    "lost": "false",
 				                    "level": "16",
 				                    "parents": [
 					                    {
 					                        "competitorIndex": "3",
-					                        "lost": "false",
+					                        "lost": "true",
 					                        "level": "32"
 					                    },
 					                    {
@@ -60,7 +60,7 @@
 			                "level": "8",
 			                "parents": [
 				                {
-				                    "competitorIndex": "",
+				                    "competitorIndex": "2",
 				                    "lost": "false",
 					                    "level": "16",
 					                    "parents": [
@@ -71,13 +71,13 @@
 					                    },
 					                    {
 					                        "competitorIndex": "5",
-					                        "lost": "false",
+					                        "lost": "true",
 					                        "level": "32"
 					                    }
 				                    ]
 				                },
 				                {
-				                    "competitorIndex": "",
+				                    "competitorIndex": "1",
 				                    "lost": "false",
 				                    "level": "16",
 				                    "parents": [
@@ -88,7 +88,7 @@
 					                    },
 					                    {
 					                        "competitorIndex": "6",
-					                        "lost": "false",
+					                        "lost": "true",
 					                        "level": "32"
 					                    }
 				                    ]
@@ -108,13 +108,13 @@
 			                "level": "8",
 			                "parents": [
 				                {
-				                    "competitorIndex": "",
+				                    "competitorIndex": "15",
 				                    "lost": "false",
 				                    "level": "16",
 				                    "parents": [
 					                    {
 					                        "competitorIndex": "8",
-					                        "lost": "false",
+					                        "lost": "true",
 					                        "level": "32"
 					                    },
 					                    {
@@ -125,13 +125,13 @@
 				                    ]
 				                },
 				                {
-				                    "competitorIndex": "",
+				                    "competitorIndex": "12",
 				                    "lost": "false",
 				                    "level": "16",
 				                    "parents": [
 					                    {
 					                        "competitorIndex": "11",
-					                        "lost": "false",
+					                        "lost": "true",
 					                        "level": "32"
 					                    },
 					                    {
@@ -149,13 +149,13 @@
 			                "level": "8",
 			                "parents": [
 				                {
-				                    "competitorIndex": "",
+				                    "competitorIndex": "13",
 				                    "lost": "false",
 				                    "level": "16",
 				                    "parents": [
 					                    {
 					                        "competitorIndex": "10",
-					                        "lost": "false",
+					                        "lost": "true",
 					                        "level": "32"
 					                    },
 					                    {
@@ -166,7 +166,7 @@
 				                    ]
 				                },
 				                {
-				                    "competitorIndex": "",
+				                    "competitorIndex": "9",
 				                    "lost": "false",
 				                    "level": "16",
 				                    "parents": [
@@ -177,7 +177,7 @@
 					                    },
 					                    {
 					                        "competitorIndex": "14",
-					                        "lost": "false",
+					                        "lost": "true",
 					                        "level": "32"
 					                    }
 				                    ]
@@ -204,7 +204,7 @@
 			                "level": "8",
 			                "parents": [
 				                {
-				                    "competitorIndex": "",
+				                    "competitorIndex": "16",
 				                    "lost": "false",
 				                    "level": "16",
 				                    "parents": [
@@ -215,19 +215,19 @@
 					                    },
 					                    {
 					                        "competitorIndex": "23",
-					                        "lost": "false",
+					                        "lost": "true",
 					                        "level": "32"
 					                    }
 				                    ]
 				                },
 				                {
-				                    "competitorIndex": "",
+				                    "competitorIndex": "20",
 				                    "lost": "false",
 				                    "level": "16",
 				                    "parents": [
 					                    {
 					                        "competitorIndex": "19",
-					                        "lost": "false",
+					                        "lost": "true",
 					                        "level": "32"
 					                    },
 					                    {
@@ -245,7 +245,7 @@
 			                "level": "8",
 			                "parents": [
 				                {
-				                    "competitorIndex": "",
+				                    "competitorIndex": "18",
 				                    "lost": "false",
 				                    "level": "16",
 				                    "parents": [
@@ -256,13 +256,13 @@
 					                    },
 					                    {
 					                        "competitorIndex": "21",
-					                        "lost": "false",
+					                        "lost": "true",
 					                        "level": "32"
 					                    }
 				                    ]
 				                },
 				                {
-				                    "competitorIndex": "",
+				                    "competitorIndex": "17",
 				                    "lost": "false",
 				                    "level": "16",
 				                    "parents": [
@@ -273,7 +273,7 @@
 					                    },
 					                    {
 					                        "competitorIndex": "22",
-					                        "lost": "false",
+					                        "lost": "true",
 					                        "level": "32"
 					                    }
 				                    ]
@@ -293,7 +293,7 @@
 			                "level": "8",
 			                "parents": [
 				                {
-				                    "competitorIndex": "",
+				                    "competitorIndex": "24",
 				                    "lost": "false",
 				                    "level": "16",
 				                    "parents": [
@@ -304,19 +304,19 @@
 					                    },
 					                    {
 					                        "competitorIndex": "31",
-					                        "lost": "false",
+					                        "lost": "true",
 					                        "level": "32"
 					                    }
 				                    ]
 				                },
 				                {
-				                    "competitorIndex": "",
+				                    "competitorIndex": "28",
 				                    "lost": "false",
 				                    "level": "16",
 				                    "parents": [
 					                    {
 					                        "competitorIndex": "27",
-					                        "lost": "false",
+					                        "lost": "true",
 					                        "level": "32"
 					                    },
 					                    {
@@ -334,7 +334,7 @@
 			                "level": "8",
 			                "parents": [
 				                {
-				                    "competitorIndex": "",
+				                    "competitorIndex": "26",
 				                    "lost": "false",
 				                    "level": "16",
 				                    "parents": [
@@ -345,13 +345,13 @@
 					                    },
 					                    {
 					                        "competitorIndex": "29",
-					                        "lost": "false",
+					                        "lost": "true",
 					                        "level": "32"
 					                    }
 				                    ]
 				                },
 				                {
-				                    "competitorIndex": "",
+				                    "competitorIndex": "25",
 				                    "lost": "false",
 				                    "level": "16",
 				                    "parents": [
@@ -362,7 +362,7 @@
 					                    },
 					                    {
 					                        "competitorIndex": "30",
-					                        "lost": "false",
+					                        "lost": "true",
 					                        "level": "32"
 					                    }
 				                    ]
