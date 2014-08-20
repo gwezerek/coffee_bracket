@@ -24,11 +24,11 @@ var designerText = '';
 // For quiz
 var indicesRound1 = [0, 7, 3, 4, 2, 5, 1, 6, 8, 15, 11, 12, 10, 13, 9, 14, 16, 23, 19, 20, 18, 21, 17, 22, 24, 31, 27, 28, 26, 29, 25, 30];
 var indicesRound2 = [0, 4, 2, 1, 15, 12, 13, 9, 16, 20, 18, 17, 24, 28, 26, 25];
-var indicesRound3 = [0, 2, 12, 13, 16, 17, 28, 29];
+var indicesRound3 = [4, 2, 15, 9, 20, 17, 24, 26];
 var indicesRound4 = [0, 13, 17, 28];
 var indicesRound5 = [0, 17];
 
-var currentRound = indicesRound2;
+var currentRound = indicesRound3;
 
 // For rankings
 var divisions = {
@@ -46,32 +46,32 @@ var divisions = {
     topPosRound3: [0, 50, 111, 156, 201, 246, 291, 336],
 
     division1: {
-        roundNumber: 2,
-        roundArray: [1, 2],
+        roundNumber: 3,
+        roundArray: [1, 2, 3],
         round1: [0, 7, 1, 6, 2, 5, 3, 4],
         round2: [0, 4, 2, 1, 7, 3, 5, 6],
-        round3: [0, 2, 3, 6, 7, 1, 4, 5]
+        round3: [4, 2, 0, 1, 7, 3, 5, 6]
     },
     division2: {
-        roundNumber: 2,
-        roundArray: [1, 2],
+        roundNumber: 3,
+        roundArray: [1, 2, 3],
         round1: [8, 15, 9, 14, 10, 13, 11, 12],
         round2: [15, 12, 13, 9, 8, 11, 10, 14],
-        round3: [12, 13, 15, 14, 8, 9, 10, 11]
+        round3: [15, 9, 12, 13, 8, 11, 10, 14]
     },
     division3: {
-        roundNumber: 2,
-        roundArray: [1, 2],
+        roundNumber: 3,
+        roundArray: [1, 2, 3],
         round1: [16, 23, 17, 22, 18, 21, 19, 20],
         round2: [16, 20, 18, 17, 23, 19, 21, 22],
-        round3: [16, 17, 19, 21, 23, 20, 22, 18]
+        round3: [20, 17, 16, 18, 23, 19, 21, 22]
     },
     division4: {
-        roundNumber: 2,
-        roundArray: [1, 2],
+        roundNumber: 3,
+        roundArray: [1, 2, 3],
         round1: [24, 31, 25, 30, 26, 29, 27, 28],
         round2: [24, 28, 26, 25, 31, 27, 29, 30],
-        round3: [28, 29, 24, 25, 31, 30, 26, 27]
+        round3: [24, 26, 28, 25, 31, 27, 29, 30]
     },
     division5: {
         roundNumber: 1,
@@ -590,7 +590,7 @@ function populateQuiz(data) {
 
         // FOR WIDGET
         quizData.designers[i].vizQuiz = true;
-        quizData.designers[i].division_index = Math.ceil((i + 1) / 4);
+        quizData.designers[i].division_index = Math.ceil((i + 1) / 2);
         // END FOR WIDGET
 
         if (i % 2) {
