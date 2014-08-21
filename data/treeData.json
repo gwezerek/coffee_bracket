@@ -9,7 +9,7 @@
 		    "level": "2",
 		    "parents": [
 		        {
-		            "competitorIndex": "",
+		            "competitorIndex": "4",
 		            "lost": "false",
 		            "level": "4",
 		            "parents": [
@@ -56,7 +56,7 @@
 			            },
 			            {
 			                "competitorIndex": "2",
-			                "lost": "false",
+			                "lost": "true",
 			                "level": "8",
 			                "parents": [
 				                {
@@ -98,13 +98,13 @@
 		            ]
 		        },
 		        {
-		            "competitorIndex": "",
+		            "competitorIndex": "9",
 		            "lost": "false",
 		            "level": "4",
 		            "parents": [
 			            {
 			                "competitorIndex": "15",
-			                "lost": "false",
+			                "lost": "true",
 			                "level": "8",
 			                "parents": [
 				                {
@@ -194,13 +194,13 @@
 		    "level": "2",
 		    "parents": [
 		        {
-		            "competitorIndex": "",
+		            "competitorIndex": "17",
 		            "lost": "false",
 		            "level": "4",
 		            "parents": [
 			            {
 			                "competitorIndex": "20",
-			                "lost": "false",
+			                "lost": "true",
 			                "level": "8",
 			                "parents": [
 				                {
@@ -283,7 +283,7 @@
 		            ]
 		        },
 		        {
-		            "competitorIndex": "",
+		            "competitorIndex": "24",
 		            "lost": "false",
 		            "level": "4",
 		            "parents": [
@@ -330,7 +330,7 @@
 			            },
 			            {
 			                "competitorIndex": "26",
-			                "lost": "false",
+			                "lost": "true",
 			                "level": "8",
 			                "parents": [
 				                {

@@ -149,6 +149,14 @@
 	margin-bottom: 0;
 }
 
+#page.kind-longread #page-main article.full-view>header .deck {
+    padding-bottom: 20px;
+}
+
+.fc-deck {
+    margin-bottom: 0;
+}
+
 #macro-coffee-week-newsletter-signup-bracket {
     margin: 30px 0 40px;
 }
@@ -535,6 +543,9 @@
 		width: 100%;
 		margin-bottom: 35px !important;
 		padding: 0;
+        &:before {
+            content: none;
+        }
 	}
 
 	.viz-division-list {

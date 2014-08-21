@@ -20,13 +20,13 @@
                 </div>
                 <ol class="viz-bracket-date-list">
                     <li class="viz-bracket-date viz-date-finished">August 18</li>
-                    <li class="viz-bracket-date">August 19</li>
-                    <li class="viz-bracket-date">August 20</li>
+                    <li class="viz-bracket-date viz-date-finished">August 19</li>
+                    <li class="viz-bracket-date viz-date-finished">August 20</li>
                     <li class="viz-bracket-date">August 21</li>
                     <li class="viz-bracket-date">August 22</li>
                     <li class="viz-bracket-date">August 21</li>
-                    <li class="viz-bracket-date">August 20</li>
-                    <li class="viz-bracket-date">August 19</li>
+                    <li class="viz-bracket-date viz-date-finished">August 20</li>
+                    <li class="viz-bracket-date viz-date-finished">August 19</li>
                     <li class="viz-bracket-date viz-date-finished">August 18</li>
                 </ol>
             </header>
@@ -259,10 +259,10 @@
                 var indicesRound1 = [0, 7, 3, 4, 2, 5, 1, 6, 8, 15, 11, 12, 10, 13, 9, 14, 16, 23, 19, 20, 18, 21, 17, 22, 24, 31, 27, 28, 26, 29, 25, 30];
                 var indicesRound2 = [0, 4, 2, 1, 15, 12, 13, 9, 16, 20, 18, 17, 24, 28, 26, 25];
                 var indicesRound3 = [4, 2, 15, 9, 20, 17, 24, 26];
-                var indicesRound4 = [0, 13, 17, 28];
+                var indicesRound4 = [4, 9, 17, 24];
                 var indicesRound5 = [0, 17];
 
-                var currentRound = indicesRound3;
+                var currentRound = indicesRound4;
 
                 // For rankings
                 var divisions = {
@@ -310,7 +310,7 @@
                     division5: {
                         roundNumber: 1,
                         roundArray: [1],
-                        round1: [0, 13, 17, 28],
+                        round1: [4, 9, 17, 24],
                         round2: [0, 17, 13, 28]
                     }
                 };
@@ -374,7 +374,7 @@
 
 
                     // d3.json('http://www.guswezerek.com/projects/bracket_madness/treeData.json', function(json) {
-                    d3.json('http://g.fastcompany.net/asset_files/-/2014/08/20/treeData.json', function(json) {
+                    d3.json('http://b.fastcompany.net/asset_files/-/2014/08/21/treeData.json', function(json) {
 
                         var nodes = tree.nodes(json.parents[leftRightIndex]);
 
@@ -467,6 +467,7 @@
                                     desiredIndex = this.dataset.originalindex;
                                 }
 
+                                // For rounds 1-4
                                 var desiredTargets = link.filter(function(d) {
                                     if (d.target.competitorIndex === desiredIndex) {
                                         return d;
@@ -476,11 +477,13 @@
 
 
                                 // For final rounds
-                                //  var desiredTargets = link.filter(function(d) {
-                                //  if (d.target.competitorIndex === desiredIndex && d.target.lost != "true") {
-                                //      return d;
-                                //  }
+                                // var desiredTargets = link.filter(function(d) {
+                                //     if (d.target.competitorIndex === desiredIndex && d.target.lost != "true") {
+                                //         console.log(d.target);
+                                //         return d;
+                                //     }
                                 // });
+
                                 // var desiredPaths = desiredTargets[0];
 
                                 desiredTargets.moveToFront();
@@ -498,7 +501,7 @@
                         }
 
                         function getDesired(desiredTargets) {
-                            if (desiredTargets[0].length == 4) {
+                            if (desiredTargets[0].length == 5) {
                                 return desiredTargets[0];
                             } else {
                                 return desiredTargets[0].slice(1);
@@ -818,13 +821,12 @@
                     myObj['designers'] = quizData;
                     quizData = myObj;
 
-
                     // Compile the list for that round
                     for (i = 0; i < quizData.designers.length; i++) {
 
                         // FOR WIDGET
                         quizData.designers[i].vizQuiz = true;
-                        quizData.designers[i].division_index = Math.ceil((i + 1) / 4);
+                        quizData.designers[i].division_index = Math.ceil((i + 1) / 1);
                         // END FOR WIDGET
 
                         if (i % 2) {
@@ -871,9 +873,6 @@
                         // Get and order only the division's designers
                         var rankingsData = filterData(data, desiredIndices);
 
-                        // console.log(rankingsData);
-
-
                         // Create objects that underscore likes
                         myObj.designers = rankingsData;
                         rankingsData = myObj;
@@ -883,6 +882,11 @@
                             // FOR WIDGET
                             rankingsData.designers[i].vizQuiz = false;
                             rankingsData.designers[i].division_index = index;
+
+                            if (index === 0) {
+                                rankingsData.designers[i].division_index = Math.ceil((i + 1) / 1)
+                            }
+
                             if (i % 2) {
                                 // FOR WIDGET
                                 rankingsData.designers[i].vizEven = true;
@@ -1085,35 +1089,6 @@
         });
 
     </script>
-    <!-- Begin MailChimp Signup Form -->
-    <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-    <style type="text/css">
-        #mc_embed_signup {
-            background:#fff;
-            clear:left;
-            font:14px Helvetica, Arial, sans-serif;
-        }
-        #mc_embed_signup form {
-            margin: 35px 0 0;
-            padding: 0;
-        }
-    </style>
-
-    <div id="mc_embed_signup">
-        <form action="//fastcompany.us2.list-manage.com/subscribe/post?u=7e7f5c9060be0fa4c269f97d9&amp;id=28013efa11" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <label for="mce-EMAIL">Receive tomorrow's bracket winners in your inbox!</label>
-            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="">
-            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;">
-                <input type="text" name="b_7e7f5c9060be0fa4c269f97d9_28013efa11" value="">
-            </div>
-            <div>
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-            </div>
-        </form>
-    </div>
-    <!--End mc_embed_signup-->
-
 
 </article>
 

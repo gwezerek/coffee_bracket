@@ -25,10 +25,10 @@ var designerText = '';
 var indicesRound1 = [0, 7, 3, 4, 2, 5, 1, 6, 8, 15, 11, 12, 10, 13, 9, 14, 16, 23, 19, 20, 18, 21, 17, 22, 24, 31, 27, 28, 26, 29, 25, 30];
 var indicesRound2 = [0, 4, 2, 1, 15, 12, 13, 9, 16, 20, 18, 17, 24, 28, 26, 25];
 var indicesRound3 = [4, 2, 15, 9, 20, 17, 24, 26];
-var indicesRound4 = [0, 13, 17, 28];
+var indicesRound4 = [4, 9, 17, 24];
 var indicesRound5 = [0, 17];
 
-var currentRound = indicesRound3;
+var currentRound = indicesRound4;
 
 // For rankings
 var divisions = {
@@ -76,7 +76,7 @@ var divisions = {
     division5: {
         roundNumber: 1,
         roundArray: [1],
-        round1: [0, 13, 17, 28],
+        round1: [4, 9, 17, 24],
         round2: [0, 17, 13, 28]
     }
 };
@@ -233,6 +233,7 @@ function buildBracket(data, leftRightIndex, target) {
                     desiredIndex = this.dataset.originalindex;
                 }
 
+                // For rounds 1-4
                 var desiredTargets = link.filter(function(d) {
                     if (d.target.competitorIndex === desiredIndex) {
                         return d;
@@ -242,11 +243,13 @@ function buildBracket(data, leftRightIndex, target) {
 
 
                 // For final rounds
-                //  var desiredTargets = link.filter(function(d) {
-                //  if (d.target.competitorIndex === desiredIndex && d.target.lost != "true") {
-                //      return d;
-                //  }
+                // var desiredTargets = link.filter(function(d) {
+                //     if (d.target.competitorIndex === desiredIndex && d.target.lost != "true") {
+                //         console.log(d.target);
+                //         return d;
+                //     }
                 // });
+
                 // var desiredPaths = desiredTargets[0];
 
                 desiredTargets.moveToFront();
@@ -264,7 +267,7 @@ function buildBracket(data, leftRightIndex, target) {
         }
 
         function getDesired(desiredTargets) {
-            if (desiredTargets[0].length == 4) {
+            if (desiredTargets[0].length == 5) {
                 return desiredTargets[0];
             } else {
                 return desiredTargets[0].slice(1);
@@ -584,13 +587,12 @@ function populateQuiz(data) {
     myObj['designers'] = quizData;
     quizData = myObj;
 
-
     // Compile the list for that round
     for (i = 0; i < quizData.designers.length; i++) {
 
         // FOR WIDGET
         quizData.designers[i].vizQuiz = true;
-        quizData.designers[i].division_index = Math.ceil((i + 1) / 2);
+        quizData.designers[i].division_index = Math.ceil((i + 1) / 1);
         // END FOR WIDGET
 
         if (i % 2) {
@@ -637,9 +639,6 @@ function populateRankings(data) {
         // Get and order only the division's designers
         var rankingsData = filterData(data, desiredIndices);
 
-        // console.log(rankingsData);
-
-
         // Create objects that underscore likes
         myObj.designers = rankingsData;
         rankingsData = myObj;
@@ -649,6 +648,11 @@ function populateRankings(data) {
             // FOR WIDGET
             rankingsData.designers[i].vizQuiz = false;
             rankingsData.designers[i].division_index = index;
+
+            if (index === 0) {
+                rankingsData.designers[i].division_index = Math.ceil((i + 1) / 1)
+            }
+
             if (i % 2) {
                 // FOR WIDGET
                 rankingsData.designers[i].vizEven = true;
