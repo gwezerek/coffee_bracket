@@ -4,7 +4,7 @@
     "level": "1",
     "parents": [
         {
-		    "competitorIndex": "",
+		    "competitorIndex": "4",
 		    "lost": "false",
 		    "level": "2",
 		    "parents": [
@@ -99,7 +99,7 @@
 		        },
 		        {
 		            "competitorIndex": "9",
-		            "lost": "false",
+		            "lost": "true",
 		            "level": "4",
 		            "parents": [
 			            {
@@ -189,7 +189,7 @@
 		    ]
 	    },
 	    {
-		    "competitorIndex": "",
+		    "competitorIndex": "17",
 		    "lost": "false",
 		    "level": "2",
 		    "parents": [
@@ -284,7 +284,7 @@
 		        },
 		        {
 		            "competitorIndex": "24",
-		            "lost": "false",
+		            "lost": "true",
 		            "level": "4",
 		            "parents": [
 			            {

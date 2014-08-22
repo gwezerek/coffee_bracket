@@ -26,9 +26,9 @@ var indicesRound1 = [0, 7, 3, 4, 2, 5, 1, 6, 8, 15, 11, 12, 10, 13, 9, 14, 16, 2
 var indicesRound2 = [0, 4, 2, 1, 15, 12, 13, 9, 16, 20, 18, 17, 24, 28, 26, 25];
 var indicesRound3 = [4, 2, 15, 9, 20, 17, 24, 26];
 var indicesRound4 = [4, 9, 17, 24];
-var indicesRound5 = [0, 17];
+var indicesRound5 = [4, 17];
 
-var currentRound = indicesRound4;
+var currentRound = indicesRound5;
 
 // For rankings
 var divisions = {
@@ -74,10 +74,10 @@ var divisions = {
         round3: [24, 26, 28, 25, 31, 27, 29, 30]
     },
     division5: {
-        roundNumber: 1,
-        roundArray: [1],
+        roundNumber: 2,
+        roundArray: [1, 2],
         round1: [4, 9, 17, 24],
-        round2: [0, 17, 13, 28]
+        round2: [4, 17, 9, 24]
     }
 };
 
@@ -234,23 +234,23 @@ function buildBracket(data, leftRightIndex, target) {
                 }
 
                 // For rounds 1-4
-                var desiredTargets = link.filter(function(d) {
-                    if (d.target.competitorIndex === desiredIndex) {
-                        return d;
-                    }
-                });
-                var desiredPaths = getDesired(desiredTargets);
-
-
-                // For final rounds
                 // var desiredTargets = link.filter(function(d) {
-                //     if (d.target.competitorIndex === desiredIndex && d.target.lost != "true") {
-                //         console.log(d.target);
+                //     if (d.target.competitorIndex === desiredIndex) {
                 //         return d;
                 //     }
                 // });
+                // var desiredPaths = getDesired(desiredTargets);
 
-                // var desiredPaths = desiredTargets[0];
+
+                // For final rounds
+                var desiredTargets = link.filter(function(d) {
+                    if (d.target.competitorIndex === desiredIndex && d.target.lost != "true") {
+                        console.log(d.target);
+                        return d;
+                    }
+                });
+
+                var desiredPaths = desiredTargets[0];
 
                 desiredTargets.moveToFront();
 
@@ -478,61 +478,66 @@ $('.viz-bracket').on('click', '.viz-bracket-designer-name', function() {
 // This code could easily be refactored into the handler above
 // But it's after midnight.
 
-// $('.viz-bracket-left-finals-surrogate').on('click', function() {
+$('.viz-bracket-left-finals-surrogate').on('click', function() {
 
-// 	var originalIndex = this.dataset.originalindex;
-// 	var divisionObj = data[originalIndex];
-// 	var infoMod = $('.viz-bracket-info-mod');
-// 	var colorsIndex = Math.floor(originalIndex / (data.length / 4));
+    var originalIndex = this.dataset.originalindex;
+    var divisionObj = data[originalIndex];
+    var infoMod = $('.viz-bracket-info-mod');
+    var colorsIndex = Math.floor(originalIndex / (data.length / 4));
 
-// 	// Variables for tooltip positioning
-// 	var forcedTarget = $('.viz-bracket-designer-name').first();
-// 	var bracket = forcedTarget.closest('.viz-bracket-wrapper');
-// 	var node = forcedTarget.parent()[0];
-// 	var position = forcedTarget.parent().attr('transform').replace('translate(','');
-// 		var pozLeft = parseInt(position.match(/\d+/)[0]);
-// 		var pozTop = parseInt(position.match( /,\d+/)[0].replace(',',''));
+    // Variables for tooltip positioning
+    var forcedTarget = $('.viz-bracket-designer-name').first();
+    var bracket = forcedTarget.closest('.viz-bracket-wrapper');
+    var node = forcedTarget.parent()[0];
+    var position = forcedTarget.parent().attr('transform').replace('translate(', '');
+    var pozLeft = parseInt(position.match(/\d+/)[0]);
+    var pozTop = parseInt(position.match(/,\d+/)[0].replace(',', ''));
 
-// 		if (bracket.hasClass('viz-bracket-left')) {
-// 			if (node.hasClass('viz-leaf')) {
-// 				pozLeft += 10;
-// 				pozTop -= 36;
-// 			} else if (node.hasClass('viz-inner')) {
-// 				pozLeft += 15;
-// 				pozTop -= 24;
-// 			}
-// 		} else if (bracket.hasClass('viz-bracket-right')) {
-// 			if (node.hasClass('viz-leaf')) {
-// 				pozLeft += 260;
-// 				pozTop -= 36;
-// 			} else if (node.hasClass('viz-inner')) {
-// 				pozLeft += 255;
-// 				pozTop -= 25;
-// 			}
-// 		}
+    if (bracket.hasClass('viz-bracket-left')) {
+        if (node.hasClass('viz-leaf')) {
+            pozLeft += 130;
+            pozTop -= 24;
+        } else if (node.hasClass('viz-inner')) {
+            pozLeft += 35;
+            pozTop -= 24;
+        }
+    } else if (bracket.hasClass('viz-bracket-right')) {
+        infoMod.removeClass('viz-bracket-info-left');
+        if (node.hasClass('viz-leaf')) {
+            pozLeft += 120;
+            pozTop -= 26;
+        } else if (node.hasClass('viz-inner')) {
+            pozLeft += 115;
+            pozTop -= 27;
+        }
+    }
 
 
-// 		infoMod.find('.viz-info-instructions').hide();
+    infoMod.find('.viz-info-instructions').hide();
 
-// 		window.setTimeout(function() {
+    window.setTimeout(function() {
 
-// 			infoMod.addClass('viz-info-initiated');
-// 			infoMod.fadeIn(200);
-// 			infoMod.css({
-// 				'top': pozTop + 'px',
-// 				'left': pozLeft + 'px'
-// 			});
-// 			infoMod.find('.viz-headshot').css({
-// 				'right': 40 * originalIndex + 'px',
-// 				'background-color': divisionColor[colorsIndex]
-// 			});
-// 			infoMod.find('.viz-designer-name').html(divisionObj.name);
-// 			infoMod.find('.viz-designer-job').html('(' + divisionObj.rank + ') ' + divisionObj.job);
-// 			infoMod.find('.viz-bracket-designer-description').html(divisionObj.description);
-// 			infoMod.find('.viz-info-designer-wrapper').fadeIn(1000);
-// 		}, 200);
+        if (bracket.hasClass('viz-bracket-left')) {
+            infoMod.addClass('viz-bracket-info-left');
+        }
 
-// 	});
+        infoMod.addClass('viz-info-initiated');
+        infoMod.fadeIn(200);
+        infoMod.css({
+            'top': pozTop + 'px',
+            'left': pozLeft + 'px'
+        });
+        infoMod.find('.viz-headshot').css({
+            'right': 40 * originalIndex + 'px',
+            'background-color': divisionColor[colorsIndex]
+        });
+        infoMod.find('.viz-designer-name').html(divisionObj.name);
+        infoMod.find('.viz-designer-job').html('(' + divisionObj.rank + ') ' + divisionObj.job);
+        infoMod.find('.viz-bracket-designer-description').html(divisionObj.description);
+        infoMod.find('.viz-info-designer-wrapper').fadeIn(1000);
+    }, 200);
+
+});
 
 // Hiding the info mod if someone clicks off it
 $(document).click(function(e) {
@@ -592,8 +597,13 @@ function populateQuiz(data) {
 
         // FOR WIDGET
         quizData.designers[i].vizQuiz = true;
-        quizData.designers[i].division_index = Math.ceil((i + 1) / 1);
         // END FOR WIDGET
+
+        if (i === 0) {
+            quizData.designers[i].division_index = 1;
+        } else {
+            quizData.designers[i].division_index = 3;
+        }
 
         if (i % 2) {
             // FOR WIDGET
@@ -609,7 +619,7 @@ function populateQuiz(data) {
             vizEven = false;
         }
 
-        if (i < (currentRound.length / 2)) {
+        if (i < (currentRound.length)) {
             toAppendStringLeft += quizTemplate(quizData.designers[i]);
         } else {
             toAppendStringRight += quizTemplate(quizData.designers[i]);
@@ -649,8 +659,19 @@ function populateRankings(data) {
             rankingsData.designers[i].vizQuiz = false;
             rankingsData.designers[i].division_index = index;
 
+            // Need to set for finals
+            // Looks like my dynamic class names weren't as elegant as I thought
+            // In retrospect could re-do using data-original-index and Math.floor
             if (index === 0) {
-                rankingsData.designers[i].division_index = Math.ceil((i + 1) / 1)
+                if (i === 0) {
+                    rankingsData.designers[i].division_index = 1;
+                } else if (i === 1) {
+                    rankingsData.designers[i].division_index = 3;
+                } else if (i === 2) {
+                    rankingsData.designers[i].division_index = 2;
+                } else if (i === 3) {
+                    rankingsData.designers[i].division_index = 4;
+                }
             }
 
             if (i % 2) {
@@ -803,7 +824,7 @@ function adjustFinalsLeft() {
     elbows.eq(0).attr('d', 'M500,168H400V135');
     elbows.eq(1).attr('d', 'M500,168H400V405');
 
-    $('.viz-bracket-left .viz-node').eq(0).attr('transform', 'translate(400,168)');
+    $('.viz-bracket-left .viz-node').eq(0).attr('transform', 'translate(495,168)');
 }
 
 function adjustFinalsRight() {

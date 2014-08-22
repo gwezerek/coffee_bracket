@@ -603,14 +603,6 @@
 }
 
 @media (min-width: 620px) {
-  /* line 23, ../sass/partials/_quiz.scss */
-  .viz-quiz-left {
-    width: 49%;
-    float: left;
-  }
-}
-
-@media (min-width: 620px) {
   /* line 30, ../sass/partials/_quiz.scss */
   .viz-quiz-right {
     width: 48%;
