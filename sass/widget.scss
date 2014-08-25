@@ -354,31 +354,31 @@
 			content: none;
 		}
 		&:nth-of-type(1){
-			left: 0px;
+			left: 53px;
 		}
 		&:nth-of-type(2){
-			left: 12%;
+			left: 16.3%;
 		}
 		&:nth-of-type(3){
-			left: 23%;
+			left: 27%;
 		}
 		&:nth-of-type(4){
-			left: 34%;
+			left: 37.7%;
 		}
 		&:nth-of-type(5){
 			left: 47%;
 		}
 		&:nth-of-type(6){
-			right: 34%;
+			right: 37.7%;
 		}
 		&:nth-of-type(7){
-			right: 23%;
+			right: 27%;
 		}
 		&:nth-of-type(8){
-			right: 12%;
+			right: 16.3%;
 		}
 		&:nth-of-type(9){
-			right: 0px;
+			right: 53px;
 		}
 	}
 
@@ -426,7 +426,7 @@
 	.viz-champion-name, .viz-champion-name:first-child, .viz-champion-name:first-line {
 		margin: 0 0 5px;
 		font-weight: 500 !important;
-		font-size: 12px !important;
+		font-size: 14px !important;
 		line-height: 80%;
 		color: $txt-black;
 	}

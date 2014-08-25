@@ -169,11 +169,11 @@
 
 .viz-division-finals {
 	margin-bottom: 35px;
-	// display: none; // Switch to display: block when appropriate
+	display: block; // Switch to display: block when appropriate
 }
 
 .viz-rankings-winner-mod {
-	display: none;
+	display: block; // Switch to display: block when appropriate
 	text-align: center;
 	width: 100px;
 	margin: 0 auto 35px;
@@ -189,7 +189,7 @@
 	border-top: none;
 	border-left: none;
 	border-right: none;
-	display: none; // Switch to display: block on the final day
+	display: block; // Switch to display: block on the final day
 }
 
 .viz-division-designers-list {

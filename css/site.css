@@ -598,6 +598,7 @@
 
 /* line 13, ../sass/partials/_quiz.scss */
 .viz-quiz {
+  display: none;
   max-width: 634px;
   margin: 0 auto;
 }
@@ -866,11 +867,12 @@
 /* line 170, ../sass/partials/_rankings.scss */
 .viz-division-finals {
   margin-bottom: 35px;
+  display: block;
 }
 
 /* line 175, ../sass/partials/_rankings.scss */
 .viz-rankings-winner-mod {
-  display: none;
+  display: block;
   text-align: center;
   width: 100px;
   margin: 0 auto 35px;
@@ -887,7 +889,7 @@
   border-top: none;
   border-left: none;
   border-right: none;
-  display: none;
+  display: block;
 }
 
 /* line 195, ../sass/partials/_rankings.scss */
@@ -935,7 +937,7 @@
 /* line 18, ../sass/partials/_bracket.scss */
 .viz-bracket-mod {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 
 /* line 23, ../sass/partials/_bracket.scss */
@@ -1244,7 +1246,6 @@
   margin: 0 auto 7px;
   width: 60px;
   height: 60px;
-  border: 1px solid #99948a;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -1279,10 +1280,9 @@
 
 /* line 294, ../sass/partials/_bracket.scss */
 .viz-champion-name {
-  display: none;
   padding: 0;
   margin: 0 0 5px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 /* line 301, ../sass/partials/_bracket.scss */

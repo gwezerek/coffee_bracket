@@ -1,11 +1,11 @@
 {
-	"competitorIndex": "",
+	"competitorIndex": "17",
     "lost": "false",
     "level": "1",
     "parents": [
         {
 		    "competitorIndex": "4",
-		    "lost": "false",
+		    "lost": "true",
 		    "level": "2",
 		    "parents": [
 		        {

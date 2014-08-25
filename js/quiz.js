@@ -101,7 +101,7 @@ d3.tsv(spreadsheetURL, function(error, myData) {
     data = myData;
     buildBracket(myData, 0, '.viz-bracket-left');
     buildBracket(myData, 1, '.viz-bracket-right');
-    populateQuiz(myData);
+    // populateQuiz(myData);
     populateRankings(myData);
 });
 

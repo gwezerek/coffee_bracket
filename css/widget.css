@@ -598,6 +598,7 @@
 
 /* line 13, ../sass/partials/_quiz.scss */
 .viz-quiz {
+  display: none;
   max-width: 634px;
   margin: 0 auto;
 }
@@ -866,11 +867,12 @@
 /* line 170, ../sass/partials/_rankings.scss */
 .viz-division-finals {
   margin-bottom: 35px;
+  display: block;
 }
 
 /* line 175, ../sass/partials/_rankings.scss */
 .viz-rankings-winner-mod {
-  display: none;
+  display: block;
   text-align: center;
   width: 100px;
   margin: 0 auto 35px;
@@ -887,7 +889,7 @@
   border-top: none;
   border-left: none;
   border-right: none;
-  display: none;
+  display: block;
 }
 
 /* line 195, ../sass/partials/_rankings.scss */
@@ -935,7 +937,7 @@
 /* line 18, ../sass/partials/_bracket.scss */
 .viz-bracket-mod {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 
 /* line 23, ../sass/partials/_bracket.scss */
@@ -1244,7 +1246,6 @@
   margin: 0 auto 7px;
   width: 60px;
   height: 60px;
-  border: 1px solid #99948a;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -1279,10 +1280,9 @@
 
 /* line 294, ../sass/partials/_bracket.scss */
 .viz-champion-name {
-  display: none;
   padding: 0;
   margin: 0 0 5px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 /* line 301, ../sass/partials/_bracket.scss */
@@ -1662,19 +1662,19 @@
 }
 /* line 356, ../sass/widget.scss */
 .prose.body .viz-bracket-date:nth-of-type(1) {
-  left: 0px;
+  left: 53px;
 }
 /* line 359, ../sass/widget.scss */
 .prose.body .viz-bracket-date:nth-of-type(2) {
-  left: 12%;
+  left: 16.3%;
 }
 /* line 362, ../sass/widget.scss */
 .prose.body .viz-bracket-date:nth-of-type(3) {
-  left: 23%;
+  left: 27%;
 }
 /* line 365, ../sass/widget.scss */
 .prose.body .viz-bracket-date:nth-of-type(4) {
-  left: 34%;
+  left: 37.7%;
 }
 /* line 368, ../sass/widget.scss */
 .prose.body .viz-bracket-date:nth-of-type(5) {
@@ -1682,19 +1682,19 @@
 }
 /* line 371, ../sass/widget.scss */
 .prose.body .viz-bracket-date:nth-of-type(6) {
-  right: 34%;
+  right: 37.7%;
 }
 /* line 374, ../sass/widget.scss */
 .prose.body .viz-bracket-date:nth-of-type(7) {
-  right: 23%;
+  right: 27%;
 }
 /* line 377, ../sass/widget.scss */
 .prose.body .viz-bracket-date:nth-of-type(8) {
-  right: 12%;
+  right: 16.3%;
 }
 /* line 380, ../sass/widget.scss */
 .prose.body .viz-bracket-date:nth-of-type(9) {
-  right: 0px;
+  right: 53px;
 }
 /* line 385, ../sass/widget.scss */
 .prose.body .viz-bracket-competitor-name {
@@ -1741,7 +1741,7 @@
 .prose.body .viz-champion-name, .prose.body .viz-champion-name:first-child, .prose.body .viz-champion-name:first-line {
   margin: 0 0 5px;
   font-weight: 500 !important;
-  font-size: 12px !important;
+  font-size: 14px !important;
   line-height: 80%;
   color: #33312e;
 }
